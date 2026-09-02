@@ -1,0 +1,1520 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tanishq Bistupur — Diamond Expertise Centre</title>
+
+<style>
+:root{
+  --gold:#a47a32;
+  --gold-light:#d6bd86;
+  --ink:#26343b;
+  --muted:#7d878b;
+  --cream:#fbfaf7;
+  --line:#dddcd6;
+  --soft:#f1f3f2;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#eef2f3;
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+}
+.wrap{max-width:480px;margin:auto;padding:18px 16px 34px}
+.card{
+  background:#fff;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 12px 38px rgba(25,35,40,.10);
+}
+
+/* HEADER */
+.hero{
+  text-align:center;
+  padding:34px 22px 28px;
+  background:linear-gradient(145deg,#fff,#f7f8f7);
+}
+.brand{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--gold);
+  font-size:54px;
+  line-height:1;
+  letter-spacing:2px;
+  font-weight:700;
+}
+.location{
+  margin-top:12px;
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+.centre{
+  margin-top:18px;
+  color:#8b744d;
+  font-size:16px;
+  letter-spacing:4px;
+  font-weight:700;
+  text-transform:uppercase;
+}
+.rule{
+  width:160px;
+  height:1px;
+  background:var(--gold-light);
+  margin:18px auto 0;
+}
+
+/* EXPERIENCE */
+.content{padding:34px 22px 28px}
+h1{
+  margin:0;
+  text-align:center;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:35px;
+  line-height:1.15;
+  color:var(--ink);
+}
+.lead{
+  text-align:center;
+  color:var(--muted);
+  font-size:17px;
+  margin:12px 0 28px;
+}
+
+.category{
+  width:100%;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:24px;
+  padding:17px 16px;
+  margin:0 0 14px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  text-align:left;
+  cursor:pointer;
+  transition:.18s ease;
+  box-shadow:0 4px 14px rgba(30,40,45,.04);
+}
+.category:hover{transform:translateY(-1px)}
+.category.selected{
+  border-color:var(--gold);
+  background:#fcf9f1;
+  box-shadow:0 5px 18px rgba(164,122,50,.10);
+}
+.icon{
+  width:56px;height:56px;min-width:56px;
+  border-radius:18px;
+  background:var(--soft);
+  display:grid;
+  place-items:center;
+  color:var(--gold);
+  font-size:24px;
+}
+.category.selected .icon{background:#f6ead0}
+.cat-title{font-size:18px;font-weight:700}
+.cat-desc{font-size:14px;color:#8a9498;margin-top:5px;line-height:1.35}
+
+/* REVIEW */
+.review-card{
+  margin-top:26px;
+  border:1px solid #d9d8d1;
+  border-radius:24px;
+  background:var(--cream);
+  padding:22px;
+}
+.label{
+  color:#917545;
+  font-size:14px;
+  letter-spacing:2px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+.review{
+  min-height:190px;
+  color:#3b3030;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:21px;
+  line-height:1.62;
+  outline:none;
+  cursor:text;
+  white-space:pre-wrap;
+}
+.hint{
+  color:#9a9fa1;
+  font-size:13px;
+  line-height:1.45;
+  margin-top:14px;
+}
+.actions{display:grid;gap:11px;margin-top:18px}
+button.action,a.action{
+  width:100%;
+  border-radius:18px;
+  padding:15px 16px;
+  font-size:16px;
+  font-weight:700;
+  text-align:center;
+  cursor:pointer;
+  text-decoration:none;
+}
+.copy{
+  border:0;
+  background:var(--gold);
+  color:#fff;
+}
+.try{
+  border:1px solid #d2d0ca;
+  background:#fff;
+  color:#5e5548;
+}
+.google{
+  border:0;
+  background:var(--ink);
+  color:#fff;
+}
+.footer-note{
+  text-align:center;
+  color:#a0a5a7;
+  font-size:12px;
+  line-height:1.5;
+  margin:18px 4px 0;
+}
+
+/* small screens */
+@media(max-width:380px){
+  .brand{font-size:46px}
+  h1{font-size:31px}
+  .review{font-size:19px}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <main class="card">
+
+    <header class="hero">
+      <div class="brand">TANISHQ</div>
+      <div class="location">BISTUPUR</div>
+      <div class="centre">DIAMOND EXPERTISE CENTRE</div>
+      <div class="rule"></div>
+    </header>
+
+    <section class="content">
+      <h1>How was your experience?</h1>
+      <p class="lead">We'd love to hear about your visit.</p>
+
+      <button class="category selected" data-category="overall">
+        <span class="icon">◇</span>
+        <span>
+          <div class="cat-title">Overall experience</div>
+          <div class="cat-desc">Your visit from start to finish</div>
+        </span>
+      </button>
+
+      <button class="category" data-category="diamond">
+        <span class="icon">◆</span>
+        <span>
+          <div class="cat-title">Diamond expertise</div>
+          <div class="cat-desc">Knowledge &amp; diamond information</div>
+        </span>
+      </button>
+
+      <button class="category" data-category="guidance">
+        <span class="icon">◇</span>
+        <span>
+          <div class="cat-title">Professional guidance</div>
+          <div class="cat-desc">Clear and helpful guidance</div>
+        </span>
+      </button>
+
+      <button class="category" data-category="transparency">
+        <span class="icon">□</span>
+        <span>
+          <div class="cat-title">Transparency</div>
+          <div class="cat-desc">Clear &amp; straightforward explanation</div>
+        </span>
+      </button>
+
+      <button class="category" data-category="service">
+        <span class="icon">✦</span>
+        <span>
+          <div class="cat-title">Service</div>
+          <div class="cat-desc">Warm and professional service</div>
+        </span>
+      </button>
+
+      <section class="review-card">
+        <div class="label">REVIEW SUGGESTION</div>
+
+        <!-- Tap/click directly in this area to edit -->
+        <div id="review" class="review" contenteditable="true" spellcheck="true"></div>
+
+        <div class="hint">
+          Tap the text if you'd like to personalize it before copying.
+        </div>
+
+        <div class="actions">
+          <button class="action copy" id="copyBtn">Copy review</button>
+          <button class="action try" id="tryBtn">↻&nbsp; Try another suggestion</button>
+          <a class="action google"
+             href="https://maps.app.goo.gl/gABNBbwhV4eW7Mnd8?g_st=ac"
+             target="_blank"
+             rel="noopener">
+             Open Google Reviews
+          </a>
+        </div>
+
+        <div class="footer-note">
+          Please make sure the review accurately reflects your genuine experience.
+          The page only provides editable starting text.
+        </div>
+      </section>
+    </section>
+  </main>
+</div>
+
+<script>
+/*
+  Editable, local-only review starters.
+  These are intentionally written as starting points rather than claims
+  that every customer experienced the same thing.
+*/
+const suggestions = {
+  overall: [
+    "The diamond characteristics gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "I had a good conversation with Rahul about the different aspects of diamond quality. He explained the important points without making them complicated.\\",
+    "Rahul explained diamond identification very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul gave me a clear understanding of diamond characteristics. His knowledge and patience stood out during the visit.\\",
+    "Rahul explained the different aspects of diamond quality very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul was very helpful in explaining diamond knowledge. He made the technical details much easier to understand.\\",
+    "Rahul explained the details I wanted to know clearly and patiently. I appreciated the professional guidance.\\",
+    "I appreciated the detailed explanation of diamond quality. It gave me a better understanding of diamonds.\\",
+    "Rahul gave me a clear understanding of diamond quality. His knowledge and patience stood out during the visit.\\",
+    "I found the diamond quality check very interesting. The explanation was clear and easy to understand.\\",
+    "The guidance from Rahul on diamond checking was helpful. He explained everything in a straightforward way.\\",
+    "It was interesting to see how diamond characteristics works. The information was explained without making it complicated.\\",
+    "I appreciated the detailed explanation of the way diamonds are checked. It gave me a better understanding of diamonds.\\",
+    "I had a good experience learning about the diamond test. The information was practical and easy to understand.\\",
+    "The demonstration and explanation of the diamond checking process were interesting. It was a good way to learn more about diamonds.\\",
+    "I really enjoyed learning about diamond verification. The details were presented clearly and patiently.\\",
+    "The diamond verification gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The explanation of diamond check made the technical side of diamonds much easier to understand.\\",
+    "The diamond identification was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "A very informative explanation of the diamond test. I liked that the details were easy to follow.\\",
+    "Rahul was very professional when discussing the information I was given. The explanation was easy to understand.\\",
+    "The diamond quality was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "The diamond check was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I had a good conversation with Rahul about the diamond testing process. He explained the important points without making them complicated.\\",
+    "The demonstration and explanation of diamond testing process were interesting. It was a good way to learn more about diamonds.\\",
+    "I learned quite a bit about diamond verification. The process and the reasons behind it were explained well.\\",
+    "I came away with a better understanding of how diamonds are tested and evaluated.\\",
+    "I learned a lot about the diamond testing process from Rahul. His explanation was simple and easy to follow.\\",
+    "It was interesting to see how the way diamonds are checked works. The information was explained without making it complicated.\\",
+    "My discussion with Rahul about the overall diamond consultation was helpful and informative.\\",
+    "The diamond testing process was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "Rahul took the time to explain the diamond checking machine properly. I found the discussion very informative.\\",
+    "The discussion about diamond characteristics was clear, practical and easy to follow.\\",
+    "I had a good experience learning about diamond testing. The information was practical and easy to understand.\\",
+    "The guidance from Rahul on diamond verification was helpful. He explained everything in a straightforward way.\\",
+    "I learned quite a bit about diamond check. The process and the reasons behind it were explained well.\\",
+    "I really enjoyed learning about diamond quality check. The details were presented clearly and patiently.\\",
+    "I appreciated the way Rahul explained the diamond testing process. The information was detailed but still easy to understand.\\",
+    "Rahul explained diamond testing very clearly. I appreciated how patiently he answered my questions.\\",
+    "The the way diamonds are checked was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "The explanation from Rahul about diamond testing was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul gave me a clear understanding of diamond identification. His knowledge and patience stood out during the visit.\\",
+    "I really enjoyed learning about diamond check. The details were presented clearly and patiently.\\",
+    "Rahul was very professional when discussing the questions I had about diamonds. The explanation was easy to understand.\\",
+    "Rahul took the time to explain understanding diamond quality properly, which made the experience more comfortable.\\",
+    "It was interesting to see how the technical side of diamond testing works. The information was explained without making it complicated.\\",
+    "The the diamond test gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "I had a good experience learning about the diamond checking process. The information was practical and easy to understand.\\",
+    "The diamond verification was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "It was interesting to see how diamond quality check works. The information was explained without making it complicated.\\",
+    "Rahul gave me a clear understanding of diamond knowledge. His knowledge and patience stood out during the visit.\\",
+    "I really enjoyed learning about diamond examination. The details were presented clearly and patiently.\\",
+    "It was interesting to see how diamond knowledge works. The information was explained without making it complicated.\\",
+    "I learned a lot about diamond characteristics from Rahul. His explanation was simple and easy to follow.\\",
+    "The diamond quality was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "Rahul was very helpful in explaining diamond quality and characteristics. He made the technical details much easier to understand.\\",
+    "I had a good conversation with Rahul about diamond quality and characteristics. He explained the important points without making them complicated.\\",
+    "A very informative explanation of diamond verification. I liked that the details were easy to follow.\\",
+    "Rahul answered my questions about the diamond testing process clearly. It was a very useful and informative discussion.\\",
+    "Rahul was very helpful in explaining the diamond checking machine. He made the technical details much easier to understand.\\",
+    "Rahul was very helpful in explaining diamond quality. He made the technical details much easier to understand.\\",
+    "The explanation from Rahul about diamond verification was clear and detailed. He was happy to answer my questions.\\",
+    "The explanation from Rahul about diamond knowledge was clear and detailed. He was happy to answer my questions.\\",
+    "I appreciated the detailed explanation of diamond check. It gave me a better understanding of diamonds.\\",
+    "I had a good conversation with Rahul about diamond identification. He explained the important points without making them complicated.\\",
+    "The diamond testing process gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "I appreciated the way Rahul explained diamond checking. The information was detailed but still easy to understand.\\",
+    "I appreciated the way Rahul explained diamond verification. The information was detailed but still easy to understand.\\",
+    "Rahul was very professional when discussing understanding diamond quality. The explanation was easy to understand.\\",
+    "The demonstration and explanation of diamond quality check were interesting. It was a good way to learn more about diamonds.\\",
+    "The diamond verification process was explained clearly and gave me a better understanding of the subject.\\",
+    "The demonstration and explanation of the technical side of diamond testing were interesting. It was a good way to learn more about diamonds.\\",
+    "I really enjoyed learning about diamond checking machine. The details were presented clearly and patiently.\\",
+    "The explanation from Rahul about diamond checking was clear and detailed. He was happy to answer my questions.\\",
+    "I had a good experience learning about diamond check. The information was practical and easy to understand.\\",
+    "The demonstration and explanation of diamond checking machine were interesting. It was a good way to learn more about diamonds.\\",
+    "Rahul took the time to explain diamond quality properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain the diamond testing process properly. I found the discussion very informative.\\",
+    "I appreciated the way Rahul explained diamond testing. The information was detailed but still easy to understand.\\",
+    "I learned quite a bit about diamond testing. The process and the reasons behind it were explained well.\\",
+    "I appreciated the way Rahul explained diamond characteristics. The information was detailed but still easy to understand.\\",
+    "It was interesting to learn how diamond characteristics are examined and compared.\\",
+    "I had a good experience learning about diamond examination. The information was practical and easy to understand.\\",
+    "I appreciated the detailed explanation of diamond checking machine. It gave me a better understanding of diamonds.\\",
+    "Rahul was very professional when discussing the consultation. The explanation was easy to understand.\\",
+    "I appreciated Rahul's knowledge of diamond evaluation. He explained the details clearly and professionally.",
+    "Rahul made diamond quality easy to understand. I appreciated his patient and professional approach.\\",
+    "I really enjoyed learning about the diamond checking process. The details were presented clearly and patiently.\\",
+    "I appreciated the detailed explanation of diamond knowledge. It gave me a better understanding of diamonds.\\",
+    "A very informative explanation of the diamond checking process. I liked that the details were easy to follow.\\",
+    "I really enjoyed learning about the technical side of diamond testing. The details were presented clearly and patiently.\\",
+    "The guidance from Rahul on diamond quality was helpful. He explained everything in a straightforward way.\\",
+    "I appreciated the detailed explanation of diamond evaluation. It gave me a better understanding of diamonds.\\",
+    "The the way diamonds are checked was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "I appreciated Rahul's help with the consultation. He answered my questions in a clear and approachable way.",
+    "I appreciated the detailed explanation of diamond verification. It gave me a better understanding of diamonds.\\",
+    "Rahul made the different aspects of diamond quality easy to understand. I appreciated his patient and professional approach.\\",
+    "The diamond testing gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "Rahul answered my questions about diamond characteristics clearly. It was a very useful and informative discussion.\\",
+    "It was interesting to see how diamond identification works. The information was explained without making it complicated.\\",
+    "I appreciated Rahul's knowledge of diamond knowledge. He explained the details clearly and professionally.",
+    "Rahul answered my questions about diamond evaluation clearly. It was a very useful and informative discussion.\\",
+    "The the diamond checking process was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I appreciated Rahul's knowledge of diamond characteristics. He explained the details clearly and professionally.",
+    "Rahul was very helpful in explaining diamond evaluation. He made the technical details much easier to understand.\\",
+    "It was interesting to see how the diamond test works. The information was explained without making it complicated.\\",
+    "Rahul answered my questions about diamond testing clearly. It was a very useful and informative discussion.\\",
+    "Rahul gave me a clear understanding of diamond quality and characteristics. His knowledge and patience stood out during the visit.\\",
+    "Rahul answered my questions about diamond checking clearly. It was a very useful and informative discussion.\\",
+    "I found the diamond characteristics very interesting. The explanation was clear and easy to understand.\\",
+    "It was interesting to see how diamond evaluation works. The information was explained without making it complicated.\\",
+    "The demonstration and explanation of diamond characteristics were interesting. It was a good way to learn more about diamonds.\\",
+    "Rahul took the time to explain the different diamond options properly, which made the experience more comfortable.\\",
+    "Rahul answered my questions about the diamond checking machine clearly. It was a very useful and informative discussion.\\",
+    "The explanation from Rahul about diamond quality and characteristics was clear and detailed. He was happy to answer my questions.\\",
+    "It was interesting to see how diamond verification works. The information was explained without making it complicated.\\",
+    "I had a good experience learning about the way diamonds are checked. The information was practical and easy to understand.\\",
+    "I had a good conversation with Rahul about diamond checking. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's knowledge of diamond testing. He explained the details clearly and professionally.",
+    "I appreciated the detailed explanation of the diamond test. It gave me a better understanding of diamonds.\\",
+    "I really enjoyed learning about the diamond test. The details were presented clearly and patiently.\\",
+    "Rahul made the diamond checking machine easy to understand. I appreciated his patient and professional approach.\\",
+    "The explanation of diamond quality made the technical side of diamonds much easier to understand.\\",
+    "I appreciated Rahul's help with understanding diamond quality. He answered my questions in a clear and approachable way.",
+    "The explanation of the diamond test made the technical side of diamonds much easier to understand.\\",
+    "The diamond knowledge was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I had a good experience learning about diamond verification. The information was practical and easy to understand.\\",
+    "I appreciated the way Rahul explained diamond identification. The information was detailed but still easy to understand.\\",
+    "The explanation from Rahul about the different aspects of diamond quality was clear and detailed. He was happy to answer my questions.\\",
+    "I found the diamond check very interesting. The explanation was clear and easy to understand.\\",
+    "My discussion with Rahul about understanding diamond quality was helpful and informative.\\",
+    "The the diamond checking process was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The explanation from Rahul about diamond characteristics was clear and detailed. He was happy to answer my questions.\\",
+    "The explanation helped me understand why different diamond characteristics matter.\\",
+    "Rahul answered my questions about diamond quality and characteristics clearly. It was a very useful and informative discussion.\\",
+    "The guidance from Rahul on diamond knowledge was helpful. He explained everything in a straightforward way.\\",
+    "Rahul made diamond knowledge easy to understand. I appreciated his patient and professional approach.\\",
+    "I learned a lot about diamond verification from Rahul. His explanation was simple and easy to follow.\\",
+    "It was interesting to see how diamond quality works. The information was explained without making it complicated.\\",
+    "It was useful to understand how a diamond can be examined using testing equipment. The explanation was straightforward.\\",
+    "A very informative explanation of diamond identification. I liked that the details were easy to follow.\\",
+    "The diamond quality check was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I had a good experience learning about diamond identification. The information was practical and easy to understand.\\",
+    "I learned quite a bit about diamond quality check. The process and the reasons behind it were explained well.\\",
+    "I found the diamond evaluation process interesting and informative.\\",
+    "Rahul took the time to explain the consultation properly, which made the experience more comfortable.\\",
+    "I learned quite a bit about the way diamonds are checked. The process and the reasons behind it were explained well.\\",
+    "Rahul was very professional when discussing the details I wanted to know. The explanation was easy to understand.\\",
+    "I appreciated the way Rahul explained the different aspects of diamond quality. The information was detailed but still easy to understand.\\",
+    "I enjoyed learning about the different characteristics used when assessing a diamond.\\",
+    "I appreciated the way Rahul explained diamond quality. The information was detailed but still easy to understand.\\",
+    "I learned quite a bit about the diamond checking process. The process and the reasons behind it were explained well.\\",
+    "The diamond examination was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I enjoyed understanding more about diamond quality and the factors that are considered.\\",
+    "A very informative explanation of diamond characteristics. I liked that the details were easy to follow.\\",
+    "Rahul explained understanding diamond quality clearly and patiently. I appreciated the professional guidance.\\",
+    "The diamond examination gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "I found the diamond testing very interesting. The explanation was clear and easy to understand.\\",
+    "The the diamond test was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "I found the diamond quality very interesting. The explanation was clear and easy to understand.\\",
+    "I appreciated the way Rahul explained the diamond checking machine. The information was detailed but still easy to understand.\\",
+    "Rahul took the time to explain the overall diamond consultation properly, which made the experience more comfortable.\\",
+    "Rahul explained the diamond testing process very clearly. I appreciated how patiently he answered my questions.\\",
+    "I appreciated Rahul's help with the information I was given. He answered my questions in a clear and approachable way.",
+    "I really enjoyed learning about diamond evaluation. The details were presented clearly and patiently.\\",
+    "I learned quite a bit about diamond evaluation. The process and the reasons behind it were explained well.\\",
+    "I learned quite a bit about diamond examination. The process and the reasons behind it were explained well.\\",
+    "I found the diamond verification very interesting. The explanation was clear and easy to understand.\\",
+    "Rahul gave me a clear understanding of diamond evaluation. His knowledge and patience stood out during the visit.\\",
+    "The explanation of diamond testing process made the technical side of diamonds much easier to understand.\\",
+    "Rahul answered my questions about the different aspects of diamond quality clearly. It was a very useful and informative discussion.\\",
+    "I appreciated Rahul's help with the questions I had about diamonds. He answered my questions in a clear and approachable way.",
+    "The diamond evaluation gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The diamond check was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The the technical side of diamond testing gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "Rahul made diamond checking easy to understand. I appreciated his patient and professional approach.\\",
+    "It was a useful introduction to how diamonds are checked and evaluated.\\",
+    "Rahul explained diamond verification very clearly. I appreciated how patiently he answered my questions.\\",
+    "My discussion with Rahul about the information I was given was helpful and informative.\\",
+    "Rahul was very helpful in explaining diamond verification. He made the technical details much easier to understand.\\",
+    "I had a good conversation with Rahul about diamond characteristics. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's help with understanding the diamond information. He answered my questions in a clear and approachable way.",
+    "I had a good conversation with Rahul about diamond quality. He explained the important points without making them complicated.\\",
+    "The explanation of diamond verification made the technical side of diamonds much easier to understand.\\",
+    "Rahul was very professional when discussing the overall diamond consultation. The explanation was easy to understand.\\",
+    "The diamond characteristics was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I found the diamond examination very interesting. The explanation was clear and easy to understand.\\",
+    "The diamond checking machine gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The explanation of diamond examination made the technical side of diamonds much easier to understand.\\",
+    "Rahul gave me a clear understanding of the diamond testing process. His knowledge and patience stood out during the visit.\\",
+    "The diamond evaluation was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "Rahul was very helpful in explaining the different aspects of diamond quality. He made the technical details much easier to understand.\\",
+    "The diamond testing process was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "Rahul was very professional when discussing the different diamond options. The explanation was easy to understand.\\",
+    "The guidance from Rahul on the different aspects of diamond quality was helpful. He explained everything in a straightforward way.\\",
+    "Rahul answered my questions about diamond identification clearly. It was a very useful and informative discussion.\\",
+    "Rahul made the diamond testing process easy to understand. I appreciated his patient and professional approach.\\",
+    "I had a good experience learning about diamond evaluation. The information was practical and easy to understand.\\",
+    "The diamond identification was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "The demonstration and explanation of diamond knowledge were interesting. It was a good way to learn more about diamonds.\\",
+    "The the diamond test was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "The explanation of the technical side of diamond testing made the technical side of diamonds much easier to understand.\\",
+    "My discussion with Rahul about understanding the diamond information was helpful and informative.\\",
+    "The diamond evaluation was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "I learned quite a bit about diamond characteristics. The process and the reasons behind it were explained well.\\",
+    "I found the explanation of diamond identification and testing quite interesting.\\",
+    "The the way diamonds are checked gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The diamond testing was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I found the the way diamonds are checked very interesting. The explanation was clear and easy to understand.\\",
+    "Rahul explained the information I was given clearly and patiently. I appreciated the professional guidance.\\",
+    "I had a good experience learning about diamond quality check. The information was practical and easy to understand.\\",
+    "The demonstration and explanation of diamond identification were interesting. It was a good way to learn more about diamonds.\\",
+    "The diamond knowledge gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "I had a good conversation with Rahul about diamond knowledge. He explained the important points without making them complicated.\\",
+    "A very informative explanation of diamond testing process. I liked that the details were easy to follow.\\",
+    "A very informative explanation of diamond quality check. I liked that the details were easy to follow.\\",
+    "I appreciated Rahul's knowledge of the diamond checking machine. He explained the details clearly and professionally.",
+    "I found the the diamond checking process very interesting. The explanation was clear and easy to understand.\\",
+    "The demonstration and explanation of diamond quality were interesting. It was a good way to learn more about diamonds.\\",
+    "I had a good experience learning about the technical side of diamond testing. The information was practical and easy to understand.\\",
+    "I found the diamond testing process very interesting. The explanation was clear and easy to understand.\\",
+    "The diamond knowledge shared during the visit was detailed without being overwhelming.\\",
+    "I appreciated the way Rahul explained diamond evaluation. The information was detailed but still easy to understand.\\",
+    "The guidance from Rahul on diamond quality and characteristics was helpful. He explained everything in a straightforward way.\\",
+    "I had a good experience learning about diamond testing process. The information was practical and easy to understand.\\",
+    "I had a good experience learning about diamond quality. The information was practical and easy to understand.\\",
+    "I learned a lot about diamond quality and characteristics from Rahul. His explanation was simple and easy to follow.\\",
+    "I really enjoyed learning about the way diamonds are checked. The details were presented clearly and patiently.\\",
+    "The demonstration and explanation of the diamond test were interesting. It was a good way to learn more about diamonds.\\",
+    "The the technical side of diamond testing was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The diamond checking machine demonstration was particularly interesting. I liked seeing the process explained step by step.\\",
+    "Rahul took the time to explain the details I wanted to know properly, which made the experience more comfortable.\\",
+    "I appreciated Rahul's knowledge of the diamond testing process. He explained the details clearly and professionally.",
+    "A very informative explanation of diamond examination. I liked that the details were easy to follow.\\",
+    "I appreciated the detailed explanation of diamond quality check. It gave me a better understanding of diamonds.\\",
+    "Rahul gave me a clear understanding of the different aspects of diamond quality. His knowledge and patience stood out during the visit.\\",
+    "I learned quite a bit about diamond knowledge. The process and the reasons behind it were explained well.\\",
+    "I really enjoyed learning about diamond quality. The details were presented clearly and patiently.\\",
+    "The explanation from Rahul about diamond evaluation was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul explained understanding the diamond information clearly and patiently. I appreciated the professional guidance.\\",
+    "I had a good experience learning about diamond characteristics. The information was practical and easy to understand.\\",
+    "Learning about diamond testing equipment was an interesting part of the experience.\\",
+    "I appreciated Rahul's knowledge of diamond identification. He explained the details clearly and professionally.",
+    "A very informative explanation of diamond quality. I liked that the details were easy to follow.\\",
+    "The explanation of diamond checking machine made the technical side of diamonds much easier to understand.\\",
+    "I had a good experience learning about diamond knowledge. The information was practical and easy to understand.\\",
+    "A very informative explanation of diamond check. I liked that the details were easy to follow.\\",
+    "I had a good conversation with Rahul about diamond testing. He explained the important points without making them complicated.\\",
+    "I really enjoyed learning about diamond testing. The details were presented clearly and patiently.\\",
+    "I learned quite a bit about diamond quality. The process and the reasons behind it were explained well.\\",
+    "Rahul took the time to explain the information I was given properly, which made the experience more comfortable.\\",
+    "Rahul explained diamond quality very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul gave me a clear understanding of diamond verification. His knowledge and patience stood out during the visit.\\",
+    "I learned a lot about diamond identification from Rahul. His explanation was simple and easy to follow.\\",
+    "My discussion with Rahul about the questions I had about diamonds was helpful and informative.\\",
+    "I learned a lot about the diamond checking machine from Rahul. His explanation was simple and easy to follow.\\",
+    "The guidance from Rahul on diamond evaluation was helpful. He explained everything in a straightforward way.\\",
+    "I appreciated the detailed explanation of diamond characteristics. It gave me a better understanding of diamonds.\\",
+    "I appreciated learning about the technology used for checking diamonds.\\",
+    "Rahul explained the different diamond options clearly and patiently. I appreciated the professional guidance.\\",
+    "Rahul took the time to explain diamond checking properly. I found the discussion very informative.\\",
+    "Rahul answered my questions about diamond quality clearly. It was a very useful and informative discussion.\\",
+    "Rahul explained diamond characteristics very clearly. I appreciated how patiently he answered my questions.\\",
+    "I really enjoyed learning about diamond testing process. The details were presented clearly and patiently.\\",
+    "The the diamond checking process gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The explanation of diamond testing made the technical side of diamonds much easier to understand.\\",
+    "I had a good conversation with Rahul about diamond verification. He explained the important points without making them complicated.\\",
+    "Rahul made diamond verification easy to understand. I appreciated his patient and professional approach.\\",
+    "I learned quite a bit about diamond checking machine. The process and the reasons behind it were explained well.\\",
+    "A very informative explanation of diamond evaluation. I liked that the details were easy to follow.\\",
+    "The diamond quality check gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "Rahul took the time to explain diamond verification properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain diamond identification properly. I found the discussion very informative.\\",
+    "The diamond examination was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "I appreciated Rahul's knowledge of diamond quality. He explained the details clearly and professionally.",
+    "The diamond testing was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "I learned a lot about diamond evaluation from Rahul. His explanation was simple and easy to follow.\\",
+    "I really enjoyed learning about diamond characteristics. The details were presented clearly and patiently.\\",
+    "I appreciated the detailed explanation of diamond testing process. It gave me a better understanding of diamonds.\\",
+    "The the technical side of diamond testing was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "The explanation of diamond characteristics made the technical side of diamonds much easier to understand.\\",
+    "A very informative explanation of the technical side of diamond testing. I liked that the details were easy to follow.\\",
+    "I had a good conversation with Rahul about diamond evaluation. He explained the important points without making them complicated.\\",
+    "I found the the diamond test very interesting. The explanation was clear and easy to understand.\\",
+    "I found the diamond evaluation very interesting. The explanation was clear and easy to understand.\\",
+    "It was interesting to see how diamond checking machine works. The information was explained without making it complicated.\\",
+    "The diamond test was explained clearly, including what the results help us understand.\\",
+    "I appreciated Rahul's knowledge of the different aspects of diamond quality. He explained the details clearly and professionally.",
+    "Rahul answered my questions about diamond knowledge clearly. It was a very useful and informative discussion.\\",
+    "Rahul was very helpful in explaining the diamond testing process. He made the technical details much easier to understand.\\",
+    "Rahul made diamond identification easy to understand. I appreciated his patient and professional approach.\\",
+    "My discussion with Rahul about the consultation was helpful and informative.\\",
+    "The explanation of diamond identification made the technical side of diamonds much easier to understand.\\",
+    "The diamond checking machine was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The diamond identification gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The guidance from Rahul on diamond testing was helpful. He explained everything in a straightforward way.\\",
+    "It was interesting to see how the diamond checking process works. The information was explained without making it complicated.\\",
+    "Rahul gave me a clear understanding of diamond testing. His knowledge and patience stood out during the visit.\\",
+    "Rahul made diamond evaluation easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul answered my questions about diamond verification clearly. It was a very useful and informative discussion.\\",
+    "I learned quite a bit about the technical side of diamond testing. The process and the reasons behind it were explained well.\\",
+    "Rahul was very helpful in explaining diamond identification. He made the technical details much easier to understand.\\",
+    "Rahul gave me a clear understanding of diamond checking. His knowledge and patience stood out during the visit.\\",
+    "The diamond verification was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The diamond check gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "I found the diamond checking machine very interesting. The explanation was clear and easy to understand.\\",
+    "The demonstration and explanation of the way diamonds are checked were interesting. It was a good way to learn more about diamonds.\\",
+    "I appreciated the detailed explanation of diamond identification. It gave me a better understanding of diamonds.\\",
+    "I appreciated the detailed explanation of diamond examination. It gave me a better understanding of diamonds.\\",
+    "The explanation from Rahul about diamond quality was clear and detailed. He was happy to answer my questions.\\",
+    "My discussion with Rahul about the details I wanted to know was helpful and informative.\\",
+    "Rahul made diamond characteristics easy to understand. I appreciated his patient and professional approach.\\",
+    "The diamond characteristics was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "Rahul was very helpful in explaining diamond testing. He made the technical details much easier to understand.\\",
+    "The explanation of the way diamonds are checked made the technical side of diamonds much easier to understand.\\",
+    "I found the diamond knowledge very interesting. The explanation was clear and easy to understand.\\",
+    "Rahul took the time to explain the different aspects of diamond quality properly. I found the discussion very informative.\\",
+    "I really enjoyed learning about diamond knowledge. The details were presented clearly and patiently.\\",
+    "Rahul took the time to explain diamond evaluation properly. I found the discussion very informative.\\",
+    "My discussion with Rahul about the different diamond options was helpful and informative.\\",
+    "The demonstration and explanation of diamond evaluation were interesting. It was a good way to learn more about diamonds.\\",
+    "I learned a lot about diamond checking from Rahul. His explanation was simple and easy to follow.\\",
+    "I appreciated Rahul's knowledge of diamond quality and characteristics. He explained the details clearly and professionally.",
+    "Rahul was very professional when discussing understanding the diamond information. The explanation was easy to understand.\\",
+    "Rahul took the time to explain diamond quality and characteristics properly. I found the discussion very informative.\\",
+    "It was interesting to see how diamond examination works. The information was explained without making it complicated.\\",
+    "A very informative explanation of diamond testing. I liked that the details were easy to follow.\\",
+    "The guidance from Rahul on the diamond testing process was helpful. He explained everything in a straightforward way.\\",
+    "I found the information about diamond quality useful and much easier to understand after the explanation.\\",
+    "It was interesting to see how diamond check works. The information was explained without making it complicated.\\",
+    "I really enjoyed learning about diamond identification. The details were presented clearly and patiently.\\",
+    "Rahul was very helpful in explaining diamond characteristics. He made the technical details much easier to understand.\\",
+    "I learned quite a bit about diamond testing process. The process and the reasons behind it were explained well.\\",
+    "A very informative explanation of diamond knowledge. I liked that the details were easy to follow.\\",
+    "I found the diamond identification very interesting. The explanation was clear and easy to understand.\\",
+    "The diamond checking machine was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "A very informative explanation of the way diamonds are checked. I liked that the details were easy to follow.\\",
+    "I appreciated the way Rahul explained diamond knowledge. The information was detailed but still easy to understand.\\",
+    "The demonstration and explanation of diamond testing were interesting. It was a good way to learn more about diamonds.\\",
+    "I had a good conversation with Rahul about the diamond checking machine. He explained the important points without making them complicated.\\",
+    "The diamond quality gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "Rahul made diamond quality and characteristics easy to understand. I appreciated his patient and professional approach.\\",
+    "I learned a lot about diamond quality from Rahul. His explanation was simple and easy to follow.\\",
+    "The diamond knowledge was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "Rahul explained diamond evaluation very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul took the time to explain the questions I had about diamonds properly, which made the experience more comfortable.\\",
+    "Rahul gave me a clear understanding of the diamond checking machine. His knowledge and patience stood out during the visit.\\",
+    "I appreciated Rahul's help with the details I wanted to know. He answered my questions in a clear and approachable way.",
+    "The explanation of diamond quality check made the technical side of diamonds much easier to understand.\\",
+    "The guidance from Rahul on diamond characteristics was helpful. He explained everything in a straightforward way.\\",
+    "The information about assessing diamond quality was presented in a clear and understandable way.\\",
+    "The explanation of diamond evaluation made the technical side of diamonds much easier to understand.\\",
+    "Rahul explained the consultation clearly and patiently. I appreciated the professional guidance.\\",
+    "Rahul took the time to explain diamond characteristics properly. I found the discussion very informative.\\",
+    "I appreciated the detailed explanation of the diamond checking process. It gave me a better understanding of diamonds.\\",
+    "I learned quite a bit about diamond identification. The process and the reasons behind it were explained well.\\",
+    "The technical explanation of diamonds was presented in a very approachable way.\\",
+    "The explanation from Rahul about the diamond testing process was clear and detailed. He was happy to answer my questions.\\",
+    "I learned a lot about the different aspects of diamond quality from Rahul. His explanation was simple and easy to follow.\\",
+    "I appreciated Rahul's knowledge of diamond checking. He explained the details clearly and professionally.",
+    "I learned a lot about diamond knowledge from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul took the time to explain diamond knowledge properly. I found the discussion very informative.\\",
+    "I learned quite a bit about the diamond test. The process and the reasons behind it were explained well.\\",
+    "Rahul explained diamond knowledge very clearly. I appreciated how patiently he answered my questions.\\",
+    "It was interesting to see how diamond testing works. The information was explained without making it complicated.\\",
+    "It was interesting to see how diamond testing process works. The information was explained without making it complicated.\\",
+    "The demonstration and explanation of diamond check were interesting. It was a good way to learn more about diamonds.\\",
+    "The diamond quality check was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The explanation from Rahul about diamond identification was clear and detailed. He was happy to answer my questions.\\",
+    "The explanation of diamond knowledge made the technical side of diamonds much easier to understand.\\",
+    "I appreciated the way Rahul explained diamond quality and characteristics. The information was detailed but still easy to understand.\\",
+    "Rahul explained the questions I had about diamonds clearly and patiently. I appreciated the professional guidance.\\",
+    "The guidance from Rahul on the diamond checking machine was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained diamond checking very clearly. I appreciated how patiently he answered my questions.\\",
+    "I appreciated the detailed explanation of diamond testing. It gave me a better understanding of diamonds.\\",
+    "I appreciated Rahul's knowledge of diamond verification. He explained the details clearly and professionally.",
+    "The explanation of the diamond checking process made the technical side of diamonds much easier to understand.\\",
+    "Rahul took the time to explain diamond testing properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain understanding the diamond information properly, which made the experience more comfortable.\\",
+    "I appreciated Rahul's help with the overall diamond consultation. He answered my questions in a clear and approachable way.",
+    "Rahul made diamond testing easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul was very helpful in explaining diamond checking. He made the technical details much easier to understand.\\",
+    "The diamond testing discussion answered several questions I had and made the process clearer.\\",
+    "I learned a lot about diamond testing from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul explained the overall diamond consultation clearly and patiently. I appreciated the professional guidance.\\",
+    "The explanation from Rahul about the diamond checking machine was clear and detailed. He was happy to answer my questions.\\",
+    "A very informative explanation of diamond checking machine. I liked that the details were easy to follow.\\",
+    "I found the the technical side of diamond testing very interesting. The explanation was clear and easy to understand.\\",
+    "The guidance from Rahul on diamond identification was helpful. He explained everything in a straightforward way.\\",
+    "The demonstration and explanation of diamond examination were interesting. It was a good way to learn more about diamonds.\\",
+    "Rahul explained diamond quality and characteristics very clearly. I appreciated how patiently he answered my questions.\\",
+    "I had a good experience learning about diamond checking machine. The information was practical and easy to understand.\\",
+    "I appreciated the detailed explanation of the technical side of diamond testing. It gave me a better understanding of diamonds.\\",
+    "I appreciated Rahul's help with the different diamond options. He answered my questions in a clear and approachable way.",
+    "Rahul explained the diamond checking machine very clearly. I appreciated how patiently he answered my questions.\\",
+    "The demonstration and explanation of diamond verification were interesting. It was a good way to learn more about diamonds."
+],
+  diamond: [
+    "The diamond characteristics gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "I appreciated the detailed explanation of diamond quality. It gave me a better understanding of diamonds.\\",
+    "I found the diamond quality check very interesting. The explanation was clear and easy to understand.\\",
+    "It was interesting to see how diamond characteristics works. The information was explained without making it complicated.\\",
+    "I appreciated the detailed explanation of the way diamonds are checked. It gave me a better understanding of diamonds.\\",
+    "I had a good experience learning about the diamond test. The information was practical and easy to understand.\\",
+    "The demonstration and explanation of the diamond checking process were interesting. It was a good way to learn more about diamonds.\\",
+    "I really enjoyed learning about diamond verification. The details were presented clearly and patiently.\\",
+    "The diamond verification gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The explanation of diamond check made the technical side of diamonds much easier to understand.\\",
+    "The diamond identification was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "A very informative explanation of the diamond test. I liked that the details were easy to follow.\\",
+    "The diamond quality was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "The diamond check was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "The demonstration and explanation of diamond testing process were interesting. It was a good way to learn more about diamonds.\\",
+    "I learned quite a bit about diamond verification. The process and the reasons behind it were explained well.\\",
+    "I came away with a better understanding of how diamonds are tested and evaluated.\\",
+    "It was interesting to see how the way diamonds are checked works. The information was explained without making it complicated.\\",
+    "The diamond testing process was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The discussion about diamond characteristics was clear, practical and easy to follow.\\",
+    "I had a good experience learning about diamond testing. The information was practical and easy to understand.\\",
+    "I learned quite a bit about diamond check. The process and the reasons behind it were explained well.\\",
+    "I really enjoyed learning about diamond quality check. The details were presented clearly and patiently.\\",
+    "The the way diamonds are checked was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I really enjoyed learning about diamond check. The details were presented clearly and patiently.\\",
+    "It was interesting to see how the technical side of diamond testing works. The information was explained without making it complicated.\\",
+    "The the diamond test gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "I had a good experience learning about the diamond checking process. The information was practical and easy to understand.\\",
+    "The diamond verification was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "It was interesting to see how diamond quality check works. The information was explained without making it complicated.\\",
+    "I really enjoyed learning about diamond examination. The details were presented clearly and patiently.\\",
+    "It was interesting to see how diamond knowledge works. The information was explained without making it complicated.\\",
+    "The diamond quality was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "A very informative explanation of diamond verification. I liked that the details were easy to follow.\\",
+    "I appreciated the detailed explanation of diamond check. It gave me a better understanding of diamonds.\\",
+    "The diamond testing process gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The demonstration and explanation of diamond quality check were interesting. It was a good way to learn more about diamonds.\\",
+    "The diamond verification process was explained clearly and gave me a better understanding of the subject.\\",
+    "The demonstration and explanation of the technical side of diamond testing were interesting. It was a good way to learn more about diamonds.\\",
+    "I really enjoyed learning about diamond checking machine. The details were presented clearly and patiently.\\",
+    "I had a good experience learning about diamond check. The information was practical and easy to understand.\\",
+    "The demonstration and explanation of diamond checking machine were interesting. It was a good way to learn more about diamonds.\\",
+    "I learned quite a bit about diamond testing. The process and the reasons behind it were explained well.\\",
+    "It was interesting to learn how diamond characteristics are examined and compared.\\",
+    "I had a good experience learning about diamond examination. The information was practical and easy to understand.\\",
+    "I appreciated the detailed explanation of diamond checking machine. It gave me a better understanding of diamonds.\\",
+    "I really enjoyed learning about the diamond checking process. The details were presented clearly and patiently.\\",
+    "I appreciated the detailed explanation of diamond knowledge. It gave me a better understanding of diamonds.\\",
+    "A very informative explanation of the diamond checking process. I liked that the details were easy to follow.\\",
+    "I really enjoyed learning about the technical side of diamond testing. The details were presented clearly and patiently.\\",
+    "I appreciated the detailed explanation of diamond evaluation. It gave me a better understanding of diamonds.\\",
+    "The the way diamonds are checked was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "I appreciated the detailed explanation of diamond verification. It gave me a better understanding of diamonds.\\",
+    "The diamond testing gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "It was interesting to see how diamond identification works. The information was explained without making it complicated.\\",
+    "The the diamond checking process was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "It was interesting to see how the diamond test works. The information was explained without making it complicated.\\",
+    "I found the diamond characteristics very interesting. The explanation was clear and easy to understand.\\",
+    "It was interesting to see how diamond evaluation works. The information was explained without making it complicated.\\",
+    "The demonstration and explanation of diamond characteristics were interesting. It was a good way to learn more about diamonds.\\",
+    "It was interesting to see how diamond verification works. The information was explained without making it complicated.\\",
+    "I had a good experience learning about the way diamonds are checked. The information was practical and easy to understand.\\",
+    "I appreciated the detailed explanation of the diamond test. It gave me a better understanding of diamonds.\\",
+    "I really enjoyed learning about the diamond test. The details were presented clearly and patiently.\\",
+    "The explanation of diamond quality made the technical side of diamonds much easier to understand.\\",
+    "The explanation of the diamond test made the technical side of diamonds much easier to understand.\\",
+    "The diamond knowledge was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I had a good experience learning about diamond verification. The information was practical and easy to understand.\\",
+    "I found the diamond check very interesting. The explanation was clear and easy to understand.\\",
+    "The the diamond checking process was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The explanation helped me understand why different diamond characteristics matter.\\",
+    "It was interesting to see how diamond quality works. The information was explained without making it complicated.\\",
+    "It was useful to understand how a diamond can be examined using testing equipment. The explanation was straightforward.\\",
+    "A very informative explanation of diamond identification. I liked that the details were easy to follow.\\",
+    "The diamond quality check was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I had a good experience learning about diamond identification. The information was practical and easy to understand.\\",
+    "I learned quite a bit about diamond quality check. The process and the reasons behind it were explained well.\\",
+    "I found the diamond evaluation process interesting and informative.\\",
+    "I learned quite a bit about the way diamonds are checked. The process and the reasons behind it were explained well.\\",
+    "I enjoyed learning about the different characteristics used when assessing a diamond.\\",
+    "I learned quite a bit about the diamond checking process. The process and the reasons behind it were explained well.\\",
+    "The diamond examination was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I enjoyed understanding more about diamond quality and the factors that are considered.\\",
+    "A very informative explanation of diamond characteristics. I liked that the details were easy to follow.\\",
+    "The diamond examination gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "I found the diamond testing very interesting. The explanation was clear and easy to understand.\\",
+    "The the diamond test was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "I found the diamond quality very interesting. The explanation was clear and easy to understand.\\",
+    "I really enjoyed learning about diamond evaluation. The details were presented clearly and patiently.\\",
+    "I learned quite a bit about diamond evaluation. The process and the reasons behind it were explained well.\\",
+    "I learned quite a bit about diamond examination. The process and the reasons behind it were explained well.\\",
+    "I found the diamond verification very interesting. The explanation was clear and easy to understand.\\",
+    "The explanation of diamond testing process made the technical side of diamonds much easier to understand.\\",
+    "The diamond evaluation gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The diamond check was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The the technical side of diamond testing gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "It was a useful introduction to how diamonds are checked and evaluated.\\",
+    "The explanation of diamond verification made the technical side of diamonds much easier to understand.\\",
+    "The diamond characteristics was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I found the diamond examination very interesting. The explanation was clear and easy to understand.\\",
+    "The diamond checking machine gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The explanation of diamond examination made the technical side of diamonds much easier to understand.\\",
+    "The diamond evaluation was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "The diamond testing process was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I had a good experience learning about diamond evaluation. The information was practical and easy to understand.\\",
+    "The diamond identification was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "The demonstration and explanation of diamond knowledge were interesting. It was a good way to learn more about diamonds.\\",
+    "The the diamond test was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "The explanation of the technical side of diamond testing made the technical side of diamonds much easier to understand.\\",
+    "The diamond evaluation was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "I learned quite a bit about diamond characteristics. The process and the reasons behind it were explained well.\\",
+    "I found the explanation of diamond identification and testing quite interesting.\\",
+    "The the way diamonds are checked gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The diamond testing was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "I found the the way diamonds are checked very interesting. The explanation was clear and easy to understand.\\",
+    "I had a good experience learning about diamond quality check. The information was practical and easy to understand.\\",
+    "The demonstration and explanation of diamond identification were interesting. It was a good way to learn more about diamonds.\\",
+    "The diamond knowledge gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "A very informative explanation of diamond testing process. I liked that the details were easy to follow.\\",
+    "A very informative explanation of diamond quality check. I liked that the details were easy to follow.\\",
+    "I found the the diamond checking process very interesting. The explanation was clear and easy to understand.\\",
+    "The demonstration and explanation of diamond quality were interesting. It was a good way to learn more about diamonds.\\",
+    "I had a good experience learning about the technical side of diamond testing. The information was practical and easy to understand.\\",
+    "I found the diamond testing process very interesting. The explanation was clear and easy to understand.\\",
+    "The diamond knowledge shared during the visit was detailed without being overwhelming.\\",
+    "I had a good experience learning about diamond testing process. The information was practical and easy to understand.\\",
+    "I had a good experience learning about diamond quality. The information was practical and easy to understand.\\",
+    "I really enjoyed learning about the way diamonds are checked. The details were presented clearly and patiently.\\",
+    "The demonstration and explanation of the diamond test were interesting. It was a good way to learn more about diamonds.\\",
+    "The the technical side of diamond testing was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The diamond checking machine demonstration was particularly interesting. I liked seeing the process explained step by step.\\",
+    "A very informative explanation of diamond examination. I liked that the details were easy to follow.\\",
+    "I appreciated the detailed explanation of diamond quality check. It gave me a better understanding of diamonds.\\",
+    "I learned quite a bit about diamond knowledge. The process and the reasons behind it were explained well.\\",
+    "I really enjoyed learning about diamond quality. The details were presented clearly and patiently.\\",
+    "I had a good experience learning about diamond characteristics. The information was practical and easy to understand.\\",
+    "Learning about diamond testing equipment was an interesting part of the experience.\\",
+    "A very informative explanation of diamond quality. I liked that the details were easy to follow.\\",
+    "The explanation of diamond checking machine made the technical side of diamonds much easier to understand.\\",
+    "I had a good experience learning about diamond knowledge. The information was practical and easy to understand.\\",
+    "A very informative explanation of diamond check. I liked that the details were easy to follow.\\",
+    "I really enjoyed learning about diamond testing. The details were presented clearly and patiently.\\",
+    "I learned quite a bit about diamond quality. The process and the reasons behind it were explained well.\\",
+    "I appreciated the detailed explanation of diamond characteristics. It gave me a better understanding of diamonds.\\",
+    "I appreciated learning about the technology used for checking diamonds.\\",
+    "I really enjoyed learning about diamond testing process. The details were presented clearly and patiently.\\",
+    "The the diamond checking process gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The explanation of diamond testing made the technical side of diamonds much easier to understand.\\",
+    "I learned quite a bit about diamond checking machine. The process and the reasons behind it were explained well.\\",
+    "A very informative explanation of diamond evaluation. I liked that the details were easy to follow.\\",
+    "The diamond quality check gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The diamond examination was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The diamond testing was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "I really enjoyed learning about diamond characteristics. The details were presented clearly and patiently.\\",
+    "I appreciated the detailed explanation of diamond testing process. It gave me a better understanding of diamonds.\\",
+    "The the technical side of diamond testing was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "The explanation of diamond characteristics made the technical side of diamonds much easier to understand.\\",
+    "A very informative explanation of the technical side of diamond testing. I liked that the details were easy to follow.\\",
+    "I found the the diamond test very interesting. The explanation was clear and easy to understand.\\",
+    "I found the diamond evaluation very interesting. The explanation was clear and easy to understand.\\",
+    "It was interesting to see how diamond checking machine works. The information was explained without making it complicated.\\",
+    "The diamond test was explained clearly, including what the results help us understand.\\",
+    "The explanation of diamond identification made the technical side of diamonds much easier to understand.\\",
+    "The diamond checking machine was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The diamond identification gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "It was interesting to see how the diamond checking process works. The information was explained without making it complicated.\\",
+    "I learned quite a bit about the technical side of diamond testing. The process and the reasons behind it were explained well.\\",
+    "The diamond verification was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The diamond check gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "I found the diamond checking machine very interesting. The explanation was clear and easy to understand.\\",
+    "The demonstration and explanation of the way diamonds are checked were interesting. It was a good way to learn more about diamonds.\\",
+    "I appreciated the detailed explanation of diamond identification. It gave me a better understanding of diamonds.\\",
+    "I appreciated the detailed explanation of diamond examination. It gave me a better understanding of diamonds.\\",
+    "The diamond characteristics was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The explanation of the way diamonds are checked made the technical side of diamonds much easier to understand.\\",
+    "I found the diamond knowledge very interesting. The explanation was clear and easy to understand.\\",
+    "I really enjoyed learning about diamond knowledge. The details were presented clearly and patiently.\\",
+    "The demonstration and explanation of diamond evaluation were interesting. It was a good way to learn more about diamonds.\\",
+    "It was interesting to see how diamond examination works. The information was explained without making it complicated.\\",
+    "A very informative explanation of diamond testing. I liked that the details were easy to follow.\\",
+    "I found the information about diamond quality useful and much easier to understand after the explanation.\\",
+    "It was interesting to see how diamond check works. The information was explained without making it complicated.\\",
+    "I really enjoyed learning about diamond identification. The details were presented clearly and patiently.\\",
+    "I learned quite a bit about diamond testing process. The process and the reasons behind it were explained well.\\",
+    "A very informative explanation of diamond knowledge. I liked that the details were easy to follow.\\",
+    "I found the diamond identification very interesting. The explanation was clear and easy to understand.\\",
+    "The diamond checking machine was explained in a simple and informative way. I learned something new about diamonds.\\",
+    "A very informative explanation of the way diamonds are checked. I liked that the details were easy to follow.\\",
+    "The demonstration and explanation of diamond testing were interesting. It was a good way to learn more about diamonds.\\",
+    "The diamond quality gave me a better understanding of how diamond quality and characteristics are assessed.\\",
+    "The diamond knowledge was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The explanation of diamond quality check made the technical side of diamonds much easier to understand.\\",
+    "The information about assessing diamond quality was presented in a clear and understandable way.\\",
+    "The explanation of diamond evaluation made the technical side of diamonds much easier to understand.\\",
+    "I appreciated the detailed explanation of the diamond checking process. It gave me a better understanding of diamonds.\\",
+    "I learned quite a bit about diamond identification. The process and the reasons behind it were explained well.\\",
+    "The technical explanation of diamonds was presented in a very approachable way.\\",
+    "I learned quite a bit about the diamond test. The process and the reasons behind it were explained well.\\",
+    "It was interesting to see how diamond testing works. The information was explained without making it complicated.\\",
+    "It was interesting to see how diamond testing process works. The information was explained without making it complicated.\\",
+    "The demonstration and explanation of diamond check were interesting. It was a good way to learn more about diamonds.\\",
+    "The diamond quality check was one of the most useful parts of my visit. The explanation was clear and informative.\\",
+    "The explanation of diamond knowledge made the technical side of diamonds much easier to understand.\\",
+    "I appreciated the detailed explanation of diamond testing. It gave me a better understanding of diamonds.\\",
+    "The explanation of the diamond checking process made the technical side of diamonds much easier to understand.\\",
+    "The diamond testing discussion answered several questions I had and made the process clearer.\\",
+    "A very informative explanation of diamond checking machine. I liked that the details were easy to follow.\\",
+    "I found the the technical side of diamond testing very interesting. The explanation was clear and easy to understand.\\",
+    "The demonstration and explanation of diamond examination were interesting. It was a good way to learn more about diamonds.\\",
+    "I had a good experience learning about diamond checking machine. The information was practical and easy to understand.\\",
+    "I appreciated the detailed explanation of the technical side of diamond testing. It gave me a better understanding of diamonds.\\",
+    "The demonstration and explanation of diamond verification were interesting. It was a good way to learn more about diamonds."
+],
+  guidance: [
+    "I had a good conversation with Rahul about the different aspects of diamond quality. He explained the important points without making them complicated.\\",
+    "Rahul explained diamond identification very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul gave me a clear understanding of diamond characteristics. His knowledge and patience stood out during the visit.\\",
+    "Rahul explained the different aspects of diamond quality very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul was very helpful in explaining diamond knowledge. He made the technical details much easier to understand.\\",
+    "Rahul explained the details I wanted to know clearly and patiently. I appreciated the professional guidance.\\",
+    "Rahul gave me a clear understanding of diamond quality. His knowledge and patience stood out during the visit.\\",
+    "The guidance from Rahul on diamond checking was helpful. He explained everything in a straightforward way.\\",
+    "Rahul was very professional when discussing the information I was given. The explanation was easy to understand.\\",
+    "I had a good conversation with Rahul about the diamond testing process. He explained the important points without making them complicated.\\",
+    "I learned a lot about the diamond testing process from Rahul. His explanation was simple and easy to follow.\\",
+    "My discussion with Rahul about the overall diamond consultation was helpful and informative.\\",
+    "Rahul took the time to explain the diamond checking machine properly. I found the discussion very informative.\\",
+    "The guidance from Rahul on diamond verification was helpful. He explained everything in a straightforward way.\\",
+    "I appreciated the way Rahul explained the diamond testing process. The information was detailed but still easy to understand.\\",
+    "Rahul explained diamond testing very clearly. I appreciated how patiently he answered my questions.\\",
+    "The explanation from Rahul about diamond testing was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul gave me a clear understanding of diamond identification. His knowledge and patience stood out during the visit.\\",
+    "Rahul was very professional when discussing the questions I had about diamonds. The explanation was easy to understand.\\",
+    "Rahul took the time to explain understanding diamond quality properly, which made the experience more comfortable.\\",
+    "Rahul gave me a clear understanding of diamond knowledge. His knowledge and patience stood out during the visit.\\",
+    "I learned a lot about diamond characteristics from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul was very helpful in explaining diamond quality and characteristics. He made the technical details much easier to understand.\\",
+    "I had a good conversation with Rahul about diamond quality and characteristics. He explained the important points without making them complicated.\\",
+    "Rahul answered my questions about the diamond testing process clearly. It was a very useful and informative discussion.\\",
+    "Rahul was very helpful in explaining the diamond checking machine. He made the technical details much easier to understand.\\",
+    "Rahul was very helpful in explaining diamond quality. He made the technical details much easier to understand.\\",
+    "The explanation from Rahul about diamond verification was clear and detailed. He was happy to answer my questions.\\",
+    "The explanation from Rahul about diamond knowledge was clear and detailed. He was happy to answer my questions.\\",
+    "I had a good conversation with Rahul about diamond identification. He explained the important points without making them complicated.\\",
+    "I appreciated the way Rahul explained diamond checking. The information was detailed but still easy to understand.\\",
+    "I appreciated the way Rahul explained diamond verification. The information was detailed but still easy to understand.\\",
+    "Rahul was very professional when discussing understanding diamond quality. The explanation was easy to understand.\\",
+    "The explanation from Rahul about diamond checking was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul took the time to explain diamond quality properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain the diamond testing process properly. I found the discussion very informative.\\",
+    "I appreciated the way Rahul explained diamond testing. The information was detailed but still easy to understand.\\",
+    "I appreciated the way Rahul explained diamond characteristics. The information was detailed but still easy to understand.\\",
+    "Rahul was very professional when discussing the consultation. The explanation was easy to understand.\\",
+    "I appreciated Rahul's knowledge of diamond evaluation. He explained the details clearly and professionally.",
+    "Rahul made diamond quality easy to understand. I appreciated his patient and professional approach.\\",
+    "The guidance from Rahul on diamond quality was helpful. He explained everything in a straightforward way.\\",
+    "I appreciated Rahul's help with the consultation. He answered my questions in a clear and approachable way.",
+    "Rahul made the different aspects of diamond quality easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul answered my questions about diamond characteristics clearly. It was a very useful and informative discussion.\\",
+    "I appreciated Rahul's knowledge of diamond knowledge. He explained the details clearly and professionally.",
+    "Rahul answered my questions about diamond evaluation clearly. It was a very useful and informative discussion.\\",
+    "I appreciated Rahul's knowledge of diamond characteristics. He explained the details clearly and professionally.",
+    "Rahul was very helpful in explaining diamond evaluation. He made the technical details much easier to understand.\\",
+    "Rahul answered my questions about diamond testing clearly. It was a very useful and informative discussion.\\",
+    "Rahul gave me a clear understanding of diamond quality and characteristics. His knowledge and patience stood out during the visit.\\",
+    "Rahul answered my questions about diamond checking clearly. It was a very useful and informative discussion.\\",
+    "Rahul took the time to explain the different diamond options properly, which made the experience more comfortable.\\",
+    "Rahul answered my questions about the diamond checking machine clearly. It was a very useful and informative discussion.\\",
+    "The explanation from Rahul about diamond quality and characteristics was clear and detailed. He was happy to answer my questions.\\",
+    "I had a good conversation with Rahul about diamond checking. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's knowledge of diamond testing. He explained the details clearly and professionally.",
+    "Rahul made the diamond checking machine easy to understand. I appreciated his patient and professional approach.\\",
+    "I appreciated Rahul's help with understanding diamond quality. He answered my questions in a clear and approachable way.",
+    "I appreciated the way Rahul explained diamond identification. The information was detailed but still easy to understand.\\",
+    "The explanation from Rahul about the different aspects of diamond quality was clear and detailed. He was happy to answer my questions.\\",
+    "My discussion with Rahul about understanding diamond quality was helpful and informative.\\",
+    "The explanation from Rahul about diamond characteristics was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul answered my questions about diamond quality and characteristics clearly. It was a very useful and informative discussion.\\",
+    "The guidance from Rahul on diamond knowledge was helpful. He explained everything in a straightforward way.\\",
+    "Rahul made diamond knowledge easy to understand. I appreciated his patient and professional approach.\\",
+    "I learned a lot about diamond verification from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul took the time to explain the consultation properly, which made the experience more comfortable.\\",
+    "Rahul was very professional when discussing the details I wanted to know. The explanation was easy to understand.\\",
+    "I appreciated the way Rahul explained the different aspects of diamond quality. The information was detailed but still easy to understand.\\",
+    "I appreciated the way Rahul explained diamond quality. The information was detailed but still easy to understand.\\",
+    "Rahul explained understanding diamond quality clearly and patiently. I appreciated the professional guidance.\\",
+    "I appreciated the way Rahul explained the diamond checking machine. The information was detailed but still easy to understand.\\",
+    "Rahul took the time to explain the overall diamond consultation properly, which made the experience more comfortable.\\",
+    "Rahul explained the diamond testing process very clearly. I appreciated how patiently he answered my questions.\\",
+    "I appreciated Rahul's help with the information I was given. He answered my questions in a clear and approachable way.",
+    "Rahul gave me a clear understanding of diamond evaluation. His knowledge and patience stood out during the visit.\\",
+    "Rahul answered my questions about the different aspects of diamond quality clearly. It was a very useful and informative discussion.\\",
+    "I appreciated Rahul's help with the questions I had about diamonds. He answered my questions in a clear and approachable way.",
+    "Rahul made diamond checking easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul explained diamond verification very clearly. I appreciated how patiently he answered my questions.\\",
+    "My discussion with Rahul about the information I was given was helpful and informative.\\",
+    "Rahul was very helpful in explaining diamond verification. He made the technical details much easier to understand.\\",
+    "I had a good conversation with Rahul about diamond characteristics. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's help with understanding the diamond information. He answered my questions in a clear and approachable way.",
+    "I had a good conversation with Rahul about diamond quality. He explained the important points without making them complicated.\\",
+    "Rahul was very professional when discussing the overall diamond consultation. The explanation was easy to understand.\\",
+    "Rahul gave me a clear understanding of the diamond testing process. His knowledge and patience stood out during the visit.\\",
+    "Rahul was very helpful in explaining the different aspects of diamond quality. He made the technical details much easier to understand.\\",
+    "Rahul was very professional when discussing the different diamond options. The explanation was easy to understand.\\",
+    "The guidance from Rahul on the different aspects of diamond quality was helpful. He explained everything in a straightforward way.\\",
+    "Rahul answered my questions about diamond identification clearly. It was a very useful and informative discussion.\\",
+    "Rahul made the diamond testing process easy to understand. I appreciated his patient and professional approach.\\",
+    "My discussion with Rahul about understanding the diamond information was helpful and informative.\\",
+    "Rahul explained the information I was given clearly and patiently. I appreciated the professional guidance.\\",
+    "I had a good conversation with Rahul about diamond knowledge. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's knowledge of the diamond checking machine. He explained the details clearly and professionally.",
+    "I appreciated the way Rahul explained diamond evaluation. The information was detailed but still easy to understand.\\",
+    "The guidance from Rahul on diamond quality and characteristics was helpful. He explained everything in a straightforward way.\\",
+    "I learned a lot about diamond quality and characteristics from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul took the time to explain the details I wanted to know properly, which made the experience more comfortable.\\",
+    "I appreciated Rahul's knowledge of the diamond testing process. He explained the details clearly and professionally.",
+    "Rahul gave me a clear understanding of the different aspects of diamond quality. His knowledge and patience stood out during the visit.\\",
+    "The explanation from Rahul about diamond evaluation was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul explained understanding the diamond information clearly and patiently. I appreciated the professional guidance.\\",
+    "I appreciated Rahul's knowledge of diamond identification. He explained the details clearly and professionally.",
+    "I had a good conversation with Rahul about diamond testing. He explained the important points without making them complicated.\\",
+    "Rahul took the time to explain the information I was given properly, which made the experience more comfortable.\\",
+    "Rahul explained diamond quality very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul gave me a clear understanding of diamond verification. His knowledge and patience stood out during the visit.\\",
+    "I learned a lot about diamond identification from Rahul. His explanation was simple and easy to follow.\\",
+    "My discussion with Rahul about the questions I had about diamonds was helpful and informative.\\",
+    "I learned a lot about the diamond checking machine from Rahul. His explanation was simple and easy to follow.\\",
+    "The guidance from Rahul on diamond evaluation was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained the different diamond options clearly and patiently. I appreciated the professional guidance.\\",
+    "Rahul took the time to explain diamond checking properly. I found the discussion very informative.\\",
+    "Rahul answered my questions about diamond quality clearly. It was a very useful and informative discussion.\\",
+    "Rahul explained diamond characteristics very clearly. I appreciated how patiently he answered my questions.\\",
+    "I had a good conversation with Rahul about diamond verification. He explained the important points without making them complicated.\\",
+    "Rahul made diamond verification easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul took the time to explain diamond verification properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain diamond identification properly. I found the discussion very informative.\\",
+    "I appreciated Rahul's knowledge of diamond quality. He explained the details clearly and professionally.",
+    "I learned a lot about diamond evaluation from Rahul. His explanation was simple and easy to follow.\\",
+    "I had a good conversation with Rahul about diamond evaluation. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's knowledge of the different aspects of diamond quality. He explained the details clearly and professionally.",
+    "Rahul answered my questions about diamond knowledge clearly. It was a very useful and informative discussion.\\",
+    "Rahul was very helpful in explaining the diamond testing process. He made the technical details much easier to understand.\\",
+    "Rahul made diamond identification easy to understand. I appreciated his patient and professional approach.\\",
+    "My discussion with Rahul about the consultation was helpful and informative.\\",
+    "The guidance from Rahul on diamond testing was helpful. He explained everything in a straightforward way.\\",
+    "Rahul gave me a clear understanding of diamond testing. His knowledge and patience stood out during the visit.\\",
+    "Rahul made diamond evaluation easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul answered my questions about diamond verification clearly. It was a very useful and informative discussion.\\",
+    "Rahul was very helpful in explaining diamond identification. He made the technical details much easier to understand.\\",
+    "Rahul gave me a clear understanding of diamond checking. His knowledge and patience stood out during the visit.\\",
+    "The explanation from Rahul about diamond quality was clear and detailed. He was happy to answer my questions.\\",
+    "My discussion with Rahul about the details I wanted to know was helpful and informative.\\",
+    "Rahul made diamond characteristics easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul was very helpful in explaining diamond testing. He made the technical details much easier to understand.\\",
+    "Rahul took the time to explain the different aspects of diamond quality properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain diamond evaluation properly. I found the discussion very informative.\\",
+    "My discussion with Rahul about the different diamond options was helpful and informative.\\",
+    "I learned a lot about diamond checking from Rahul. His explanation was simple and easy to follow.\\",
+    "I appreciated Rahul's knowledge of diamond quality and characteristics. He explained the details clearly and professionally.",
+    "Rahul was very professional when discussing understanding the diamond information. The explanation was easy to understand.\\",
+    "Rahul took the time to explain diamond quality and characteristics properly. I found the discussion very informative.\\",
+    "The guidance from Rahul on the diamond testing process was helpful. He explained everything in a straightforward way.\\",
+    "Rahul was very helpful in explaining diamond characteristics. He made the technical details much easier to understand.\\",
+    "I appreciated the way Rahul explained diamond knowledge. The information was detailed but still easy to understand.\\",
+    "I had a good conversation with Rahul about the diamond checking machine. He explained the important points without making them complicated.\\",
+    "Rahul made diamond quality and characteristics easy to understand. I appreciated his patient and professional approach.\\",
+    "I learned a lot about diamond quality from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul explained diamond evaluation very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul took the time to explain the questions I had about diamonds properly, which made the experience more comfortable.\\",
+    "Rahul gave me a clear understanding of the diamond checking machine. His knowledge and patience stood out during the visit.\\",
+    "I appreciated Rahul's help with the details I wanted to know. He answered my questions in a clear and approachable way.",
+    "The guidance from Rahul on diamond characteristics was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained the consultation clearly and patiently. I appreciated the professional guidance.\\",
+    "Rahul took the time to explain diamond characteristics properly. I found the discussion very informative.\\",
+    "The explanation from Rahul about the diamond testing process was clear and detailed. He was happy to answer my questions.\\",
+    "I learned a lot about the different aspects of diamond quality from Rahul. His explanation was simple and easy to follow.\\",
+    "I appreciated Rahul's knowledge of diamond checking. He explained the details clearly and professionally.",
+    "I learned a lot about diamond knowledge from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul took the time to explain diamond knowledge properly. I found the discussion very informative.\\",
+    "Rahul explained diamond knowledge very clearly. I appreciated how patiently he answered my questions.\\",
+    "The explanation from Rahul about diamond identification was clear and detailed. He was happy to answer my questions.\\",
+    "I appreciated the way Rahul explained diamond quality and characteristics. The information was detailed but still easy to understand.\\",
+    "Rahul explained the questions I had about diamonds clearly and patiently. I appreciated the professional guidance.\\",
+    "The guidance from Rahul on the diamond checking machine was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained diamond checking very clearly. I appreciated how patiently he answered my questions.\\",
+    "I appreciated Rahul's knowledge of diamond verification. He explained the details clearly and professionally.",
+    "Rahul took the time to explain diamond testing properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain understanding the diamond information properly, which made the experience more comfortable.\\",
+    "I appreciated Rahul's help with the overall diamond consultation. He answered my questions in a clear and approachable way.",
+    "Rahul made diamond testing easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul was very helpful in explaining diamond checking. He made the technical details much easier to understand.\\",
+    "I learned a lot about diamond testing from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul explained the overall diamond consultation clearly and patiently. I appreciated the professional guidance.\\",
+    "The explanation from Rahul about the diamond checking machine was clear and detailed. He was happy to answer my questions.\\",
+    "The guidance from Rahul on diamond identification was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained diamond quality and characteristics very clearly. I appreciated how patiently he answered my questions.\\",
+    "I appreciated Rahul's help with the different diamond options. He answered my questions in a clear and approachable way.",
+    "Rahul explained the diamond checking machine very clearly. I appreciated how patiently he answered my questions."
+],
+  transparency: [
+    "I had a good conversation with Rahul about the different aspects of diamond quality. He explained the important points without making them complicated.\\",
+    "Rahul explained diamond identification very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul gave me a clear understanding of diamond characteristics. His knowledge and patience stood out during the visit.\\",
+    "Rahul explained the different aspects of diamond quality very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul was very helpful in explaining diamond knowledge. He made the technical details much easier to understand.\\",
+    "Rahul explained the details I wanted to know clearly and patiently. I appreciated the professional guidance.\\",
+    "Rahul gave me a clear understanding of diamond quality. His knowledge and patience stood out during the visit.\\",
+    "The guidance from Rahul on diamond checking was helpful. He explained everything in a straightforward way.\\",
+    "Rahul was very professional when discussing the information I was given. The explanation was easy to understand.\\",
+    "I had a good conversation with Rahul about the diamond testing process. He explained the important points without making them complicated.\\",
+    "I learned a lot about the diamond testing process from Rahul. His explanation was simple and easy to follow.\\",
+    "My discussion with Rahul about the overall diamond consultation was helpful and informative.\\",
+    "Rahul took the time to explain the diamond checking machine properly. I found the discussion very informative.\\",
+    "The guidance from Rahul on diamond verification was helpful. He explained everything in a straightforward way.\\",
+    "I appreciated the way Rahul explained the diamond testing process. The information was detailed but still easy to understand.\\",
+    "Rahul explained diamond testing very clearly. I appreciated how patiently he answered my questions.\\",
+    "The explanation from Rahul about diamond testing was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul gave me a clear understanding of diamond identification. His knowledge and patience stood out during the visit.\\",
+    "Rahul was very professional when discussing the questions I had about diamonds. The explanation was easy to understand.\\",
+    "Rahul took the time to explain understanding diamond quality properly, which made the experience more comfortable.\\",
+    "Rahul gave me a clear understanding of diamond knowledge. His knowledge and patience stood out during the visit.\\",
+    "I learned a lot about diamond characteristics from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul was very helpful in explaining diamond quality and characteristics. He made the technical details much easier to understand.\\",
+    "I had a good conversation with Rahul about diamond quality and characteristics. He explained the important points without making them complicated.\\",
+    "Rahul answered my questions about the diamond testing process clearly. It was a very useful and informative discussion.\\",
+    "Rahul was very helpful in explaining the diamond checking machine. He made the technical details much easier to understand.\\",
+    "Rahul was very helpful in explaining diamond quality. He made the technical details much easier to understand.\\",
+    "The explanation from Rahul about diamond verification was clear and detailed. He was happy to answer my questions.\\",
+    "The explanation from Rahul about diamond knowledge was clear and detailed. He was happy to answer my questions.\\",
+    "I had a good conversation with Rahul about diamond identification. He explained the important points without making them complicated.\\",
+    "I appreciated the way Rahul explained diamond checking. The information was detailed but still easy to understand.\\",
+    "I appreciated the way Rahul explained diamond verification. The information was detailed but still easy to understand.\\",
+    "Rahul was very professional when discussing understanding diamond quality. The explanation was easy to understand.\\",
+    "The explanation from Rahul about diamond checking was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul took the time to explain diamond quality properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain the diamond testing process properly. I found the discussion very informative.\\",
+    "I appreciated the way Rahul explained diamond testing. The information was detailed but still easy to understand.\\",
+    "I appreciated the way Rahul explained diamond characteristics. The information was detailed but still easy to understand.\\",
+    "Rahul was very professional when discussing the consultation. The explanation was easy to understand.\\",
+    "I appreciated Rahul's knowledge of diamond evaluation. He explained the details clearly and professionally.",
+    "Rahul made diamond quality easy to understand. I appreciated his patient and professional approach.\\",
+    "The guidance from Rahul on diamond quality was helpful. He explained everything in a straightforward way.\\",
+    "I appreciated Rahul's help with the consultation. He answered my questions in a clear and approachable way.",
+    "Rahul made the different aspects of diamond quality easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul answered my questions about diamond characteristics clearly. It was a very useful and informative discussion.\\",
+    "I appreciated Rahul's knowledge of diamond knowledge. He explained the details clearly and professionally.",
+    "Rahul answered my questions about diamond evaluation clearly. It was a very useful and informative discussion.\\",
+    "I appreciated Rahul's knowledge of diamond characteristics. He explained the details clearly and professionally.",
+    "Rahul was very helpful in explaining diamond evaluation. He made the technical details much easier to understand.\\",
+    "Rahul answered my questions about diamond testing clearly. It was a very useful and informative discussion.\\",
+    "Rahul gave me a clear understanding of diamond quality and characteristics. His knowledge and patience stood out during the visit.\\",
+    "Rahul answered my questions about diamond checking clearly. It was a very useful and informative discussion.\\",
+    "Rahul took the time to explain the different diamond options properly, which made the experience more comfortable.\\",
+    "Rahul answered my questions about the diamond checking machine clearly. It was a very useful and informative discussion.\\",
+    "The explanation from Rahul about diamond quality and characteristics was clear and detailed. He was happy to answer my questions.\\",
+    "I had a good conversation with Rahul about diamond checking. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's knowledge of diamond testing. He explained the details clearly and professionally.",
+    "Rahul made the diamond checking machine easy to understand. I appreciated his patient and professional approach.\\",
+    "I appreciated Rahul's help with understanding diamond quality. He answered my questions in a clear and approachable way.",
+    "I appreciated the way Rahul explained diamond identification. The information was detailed but still easy to understand.\\",
+    "The explanation from Rahul about the different aspects of diamond quality was clear and detailed. He was happy to answer my questions.\\",
+    "My discussion with Rahul about understanding diamond quality was helpful and informative.\\",
+    "The explanation from Rahul about diamond characteristics was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul answered my questions about diamond quality and characteristics clearly. It was a very useful and informative discussion.\\",
+    "The guidance from Rahul on diamond knowledge was helpful. He explained everything in a straightforward way.\\",
+    "Rahul made diamond knowledge easy to understand. I appreciated his patient and professional approach.\\",
+    "I learned a lot about diamond verification from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul took the time to explain the consultation properly, which made the experience more comfortable.\\",
+    "Rahul was very professional when discussing the details I wanted to know. The explanation was easy to understand.\\",
+    "I appreciated the way Rahul explained the different aspects of diamond quality. The information was detailed but still easy to understand.\\",
+    "I appreciated the way Rahul explained diamond quality. The information was detailed but still easy to understand.\\",
+    "Rahul explained understanding diamond quality clearly and patiently. I appreciated the professional guidance.\\",
+    "I appreciated the way Rahul explained the diamond checking machine. The information was detailed but still easy to understand.\\",
+    "Rahul took the time to explain the overall diamond consultation properly, which made the experience more comfortable.\\",
+    "Rahul explained the diamond testing process very clearly. I appreciated how patiently he answered my questions.\\",
+    "I appreciated Rahul's help with the information I was given. He answered my questions in a clear and approachable way.",
+    "Rahul gave me a clear understanding of diamond evaluation. His knowledge and patience stood out during the visit.\\",
+    "Rahul answered my questions about the different aspects of diamond quality clearly. It was a very useful and informative discussion.\\",
+    "I appreciated Rahul's help with the questions I had about diamonds. He answered my questions in a clear and approachable way.",
+    "Rahul made diamond checking easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul explained diamond verification very clearly. I appreciated how patiently he answered my questions.\\",
+    "My discussion with Rahul about the information I was given was helpful and informative.\\",
+    "Rahul was very helpful in explaining diamond verification. He made the technical details much easier to understand.\\",
+    "I had a good conversation with Rahul about diamond characteristics. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's help with understanding the diamond information. He answered my questions in a clear and approachable way.",
+    "I had a good conversation with Rahul about diamond quality. He explained the important points without making them complicated.\\",
+    "Rahul was very professional when discussing the overall diamond consultation. The explanation was easy to understand.\\",
+    "Rahul gave me a clear understanding of the diamond testing process. His knowledge and patience stood out during the visit.\\",
+    "Rahul was very helpful in explaining the different aspects of diamond quality. He made the technical details much easier to understand.\\",
+    "Rahul was very professional when discussing the different diamond options. The explanation was easy to understand.\\",
+    "The guidance from Rahul on the different aspects of diamond quality was helpful. He explained everything in a straightforward way.\\",
+    "Rahul answered my questions about diamond identification clearly. It was a very useful and informative discussion.\\",
+    "Rahul made the diamond testing process easy to understand. I appreciated his patient and professional approach.\\",
+    "My discussion with Rahul about understanding the diamond information was helpful and informative.\\",
+    "Rahul explained the information I was given clearly and patiently. I appreciated the professional guidance.\\",
+    "I had a good conversation with Rahul about diamond knowledge. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's knowledge of the diamond checking machine. He explained the details clearly and professionally.",
+    "I appreciated the way Rahul explained diamond evaluation. The information was detailed but still easy to understand.\\",
+    "The guidance from Rahul on diamond quality and characteristics was helpful. He explained everything in a straightforward way.\\",
+    "I learned a lot about diamond quality and characteristics from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul took the time to explain the details I wanted to know properly, which made the experience more comfortable.\\",
+    "I appreciated Rahul's knowledge of the diamond testing process. He explained the details clearly and professionally.",
+    "Rahul gave me a clear understanding of the different aspects of diamond quality. His knowledge and patience stood out during the visit.\\",
+    "The explanation from Rahul about diamond evaluation was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul explained understanding the diamond information clearly and patiently. I appreciated the professional guidance.\\",
+    "I appreciated Rahul's knowledge of diamond identification. He explained the details clearly and professionally.",
+    "I had a good conversation with Rahul about diamond testing. He explained the important points without making them complicated.\\",
+    "Rahul took the time to explain the information I was given properly, which made the experience more comfortable.\\",
+    "Rahul explained diamond quality very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul gave me a clear understanding of diamond verification. His knowledge and patience stood out during the visit.\\",
+    "I learned a lot about diamond identification from Rahul. His explanation was simple and easy to follow.\\",
+    "My discussion with Rahul about the questions I had about diamonds was helpful and informative.\\",
+    "I learned a lot about the diamond checking machine from Rahul. His explanation was simple and easy to follow.\\",
+    "The guidance from Rahul on diamond evaluation was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained the different diamond options clearly and patiently. I appreciated the professional guidance.\\",
+    "Rahul took the time to explain diamond checking properly. I found the discussion very informative.\\",
+    "Rahul answered my questions about diamond quality clearly. It was a very useful and informative discussion.\\",
+    "Rahul explained diamond characteristics very clearly. I appreciated how patiently he answered my questions.\\",
+    "I had a good conversation with Rahul about diamond verification. He explained the important points without making them complicated.\\",
+    "Rahul made diamond verification easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul took the time to explain diamond verification properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain diamond identification properly. I found the discussion very informative.\\",
+    "I appreciated Rahul's knowledge of diamond quality. He explained the details clearly and professionally.",
+    "I learned a lot about diamond evaluation from Rahul. His explanation was simple and easy to follow.\\",
+    "I had a good conversation with Rahul about diamond evaluation. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's knowledge of the different aspects of diamond quality. He explained the details clearly and professionally.",
+    "Rahul answered my questions about diamond knowledge clearly. It was a very useful and informative discussion.\\",
+    "Rahul was very helpful in explaining the diamond testing process. He made the technical details much easier to understand.\\",
+    "Rahul made diamond identification easy to understand. I appreciated his patient and professional approach.\\",
+    "My discussion with Rahul about the consultation was helpful and informative.\\",
+    "The guidance from Rahul on diamond testing was helpful. He explained everything in a straightforward way.\\",
+    "Rahul gave me a clear understanding of diamond testing. His knowledge and patience stood out during the visit.\\",
+    "Rahul made diamond evaluation easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul answered my questions about diamond verification clearly. It was a very useful and informative discussion.\\",
+    "Rahul was very helpful in explaining diamond identification. He made the technical details much easier to understand.\\",
+    "Rahul gave me a clear understanding of diamond checking. His knowledge and patience stood out during the visit.\\",
+    "The explanation from Rahul about diamond quality was clear and detailed. He was happy to answer my questions.\\",
+    "My discussion with Rahul about the details I wanted to know was helpful and informative.\\",
+    "Rahul made diamond characteristics easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul was very helpful in explaining diamond testing. He made the technical details much easier to understand.\\",
+    "Rahul took the time to explain the different aspects of diamond quality properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain diamond evaluation properly. I found the discussion very informative.\\",
+    "My discussion with Rahul about the different diamond options was helpful and informative.\\",
+    "I learned a lot about diamond checking from Rahul. His explanation was simple and easy to follow.\\",
+    "I appreciated Rahul's knowledge of diamond quality and characteristics. He explained the details clearly and professionally.",
+    "Rahul was very professional when discussing understanding the diamond information. The explanation was easy to understand.\\",
+    "Rahul took the time to explain diamond quality and characteristics properly. I found the discussion very informative.\\",
+    "The guidance from Rahul on the diamond testing process was helpful. He explained everything in a straightforward way.\\",
+    "Rahul was very helpful in explaining diamond characteristics. He made the technical details much easier to understand.\\",
+    "I appreciated the way Rahul explained diamond knowledge. The information was detailed but still easy to understand.\\",
+    "I had a good conversation with Rahul about the diamond checking machine. He explained the important points without making them complicated.\\",
+    "Rahul made diamond quality and characteristics easy to understand. I appreciated his patient and professional approach.\\",
+    "I learned a lot about diamond quality from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul explained diamond evaluation very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul took the time to explain the questions I had about diamonds properly, which made the experience more comfortable.\\",
+    "Rahul gave me a clear understanding of the diamond checking machine. His knowledge and patience stood out during the visit.\\",
+    "I appreciated Rahul's help with the details I wanted to know. He answered my questions in a clear and approachable way.",
+    "The guidance from Rahul on diamond characteristics was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained the consultation clearly and patiently. I appreciated the professional guidance.\\",
+    "Rahul took the time to explain diamond characteristics properly. I found the discussion very informative.\\",
+    "The explanation from Rahul about the diamond testing process was clear and detailed. He was happy to answer my questions.\\",
+    "I learned a lot about the different aspects of diamond quality from Rahul. His explanation was simple and easy to follow.\\",
+    "I appreciated Rahul's knowledge of diamond checking. He explained the details clearly and professionally.",
+    "I learned a lot about diamond knowledge from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul took the time to explain diamond knowledge properly. I found the discussion very informative.\\",
+    "Rahul explained diamond knowledge very clearly. I appreciated how patiently he answered my questions.\\",
+    "The explanation from Rahul about diamond identification was clear and detailed. He was happy to answer my questions.\\",
+    "I appreciated the way Rahul explained diamond quality and characteristics. The information was detailed but still easy to understand.\\",
+    "Rahul explained the questions I had about diamonds clearly and patiently. I appreciated the professional guidance.\\",
+    "The guidance from Rahul on the diamond checking machine was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained diamond checking very clearly. I appreciated how patiently he answered my questions.\\",
+    "I appreciated Rahul's knowledge of diamond verification. He explained the details clearly and professionally.",
+    "Rahul took the time to explain diamond testing properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain understanding the diamond information properly, which made the experience more comfortable.\\",
+    "I appreciated Rahul's help with the overall diamond consultation. He answered my questions in a clear and approachable way.",
+    "Rahul made diamond testing easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul was very helpful in explaining diamond checking. He made the technical details much easier to understand.\\",
+    "I learned a lot about diamond testing from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul explained the overall diamond consultation clearly and patiently. I appreciated the professional guidance.\\",
+    "The explanation from Rahul about the diamond checking machine was clear and detailed. He was happy to answer my questions.\\",
+    "The guidance from Rahul on diamond identification was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained diamond quality and characteristics very clearly. I appreciated how patiently he answered my questions.\\",
+    "I appreciated Rahul's help with the different diamond options. He answered my questions in a clear and approachable way.",
+    "Rahul explained the diamond checking machine very clearly. I appreciated how patiently he answered my questions."
+],
+  service: [
+    "I had a good conversation with Rahul about the different aspects of diamond quality. He explained the important points without making them complicated.\\",
+    "Rahul explained diamond identification very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul gave me a clear understanding of diamond characteristics. His knowledge and patience stood out during the visit.\\",
+    "Rahul explained the different aspects of diamond quality very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul was very helpful in explaining diamond knowledge. He made the technical details much easier to understand.\\",
+    "Rahul explained the details I wanted to know clearly and patiently. I appreciated the professional guidance.\\",
+    "Rahul gave me a clear understanding of diamond quality. His knowledge and patience stood out during the visit.\\",
+    "The guidance from Rahul on diamond checking was helpful. He explained everything in a straightforward way.\\",
+    "Rahul was very professional when discussing the information I was given. The explanation was easy to understand.\\",
+    "I had a good conversation with Rahul about the diamond testing process. He explained the important points without making them complicated.\\",
+    "I learned a lot about the diamond testing process from Rahul. His explanation was simple and easy to follow.\\",
+    "My discussion with Rahul about the overall diamond consultation was helpful and informative.\\",
+    "Rahul took the time to explain the diamond checking machine properly. I found the discussion very informative.\\",
+    "The guidance from Rahul on diamond verification was helpful. He explained everything in a straightforward way.\\",
+    "I appreciated the way Rahul explained the diamond testing process. The information was detailed but still easy to understand.\\",
+    "Rahul explained diamond testing very clearly. I appreciated how patiently he answered my questions.\\",
+    "The explanation from Rahul about diamond testing was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul gave me a clear understanding of diamond identification. His knowledge and patience stood out during the visit.\\",
+    "Rahul was very professional when discussing the questions I had about diamonds. The explanation was easy to understand.\\",
+    "Rahul took the time to explain understanding diamond quality properly, which made the experience more comfortable.\\",
+    "Rahul gave me a clear understanding of diamond knowledge. His knowledge and patience stood out during the visit.\\",
+    "I learned a lot about diamond characteristics from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul was very helpful in explaining diamond quality and characteristics. He made the technical details much easier to understand.\\",
+    "I had a good conversation with Rahul about diamond quality and characteristics. He explained the important points without making them complicated.\\",
+    "Rahul answered my questions about the diamond testing process clearly. It was a very useful and informative discussion.\\",
+    "Rahul was very helpful in explaining the diamond checking machine. He made the technical details much easier to understand.\\",
+    "Rahul was very helpful in explaining diamond quality. He made the technical details much easier to understand.\\",
+    "The explanation from Rahul about diamond verification was clear and detailed. He was happy to answer my questions.\\",
+    "The explanation from Rahul about diamond knowledge was clear and detailed. He was happy to answer my questions.\\",
+    "I had a good conversation with Rahul about diamond identification. He explained the important points without making them complicated.\\",
+    "I appreciated the way Rahul explained diamond checking. The information was detailed but still easy to understand.\\",
+    "I appreciated the way Rahul explained diamond verification. The information was detailed but still easy to understand.\\",
+    "Rahul was very professional when discussing understanding diamond quality. The explanation was easy to understand.\\",
+    "The explanation from Rahul about diamond checking was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul took the time to explain diamond quality properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain the diamond testing process properly. I found the discussion very informative.\\",
+    "I appreciated the way Rahul explained diamond testing. The information was detailed but still easy to understand.\\",
+    "I appreciated the way Rahul explained diamond characteristics. The information was detailed but still easy to understand.\\",
+    "Rahul was very professional when discussing the consultation. The explanation was easy to understand.\\",
+    "I appreciated Rahul's knowledge of diamond evaluation. He explained the details clearly and professionally.",
+    "Rahul made diamond quality easy to understand. I appreciated his patient and professional approach.\\",
+    "The guidance from Rahul on diamond quality was helpful. He explained everything in a straightforward way.\\",
+    "I appreciated Rahul's help with the consultation. He answered my questions in a clear and approachable way.",
+    "Rahul made the different aspects of diamond quality easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul answered my questions about diamond characteristics clearly. It was a very useful and informative discussion.\\",
+    "I appreciated Rahul's knowledge of diamond knowledge. He explained the details clearly and professionally.",
+    "Rahul answered my questions about diamond evaluation clearly. It was a very useful and informative discussion.\\",
+    "I appreciated Rahul's knowledge of diamond characteristics. He explained the details clearly and professionally.",
+    "Rahul was very helpful in explaining diamond evaluation. He made the technical details much easier to understand.\\",
+    "Rahul answered my questions about diamond testing clearly. It was a very useful and informative discussion.\\",
+    "Rahul gave me a clear understanding of diamond quality and characteristics. His knowledge and patience stood out during the visit.\\",
+    "Rahul answered my questions about diamond checking clearly. It was a very useful and informative discussion.\\",
+    "Rahul took the time to explain the different diamond options properly, which made the experience more comfortable.\\",
+    "Rahul answered my questions about the diamond checking machine clearly. It was a very useful and informative discussion.\\",
+    "The explanation from Rahul about diamond quality and characteristics was clear and detailed. He was happy to answer my questions.\\",
+    "I had a good conversation with Rahul about diamond checking. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's knowledge of diamond testing. He explained the details clearly and professionally.",
+    "Rahul made the diamond checking machine easy to understand. I appreciated his patient and professional approach.\\",
+    "I appreciated Rahul's help with understanding diamond quality. He answered my questions in a clear and approachable way.",
+    "I appreciated the way Rahul explained diamond identification. The information was detailed but still easy to understand.\\",
+    "The explanation from Rahul about the different aspects of diamond quality was clear and detailed. He was happy to answer my questions.\\",
+    "My discussion with Rahul about understanding diamond quality was helpful and informative.\\",
+    "The explanation from Rahul about diamond characteristics was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul answered my questions about diamond quality and characteristics clearly. It was a very useful and informative discussion.\\",
+    "The guidance from Rahul on diamond knowledge was helpful. He explained everything in a straightforward way.\\",
+    "Rahul made diamond knowledge easy to understand. I appreciated his patient and professional approach.\\",
+    "I learned a lot about diamond verification from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul took the time to explain the consultation properly, which made the experience more comfortable.\\",
+    "Rahul was very professional when discussing the details I wanted to know. The explanation was easy to understand.\\",
+    "I appreciated the way Rahul explained the different aspects of diamond quality. The information was detailed but still easy to understand.\\",
+    "I appreciated the way Rahul explained diamond quality. The information was detailed but still easy to understand.\\",
+    "Rahul explained understanding diamond quality clearly and patiently. I appreciated the professional guidance.\\",
+    "I appreciated the way Rahul explained the diamond checking machine. The information was detailed but still easy to understand.\\",
+    "Rahul took the time to explain the overall diamond consultation properly, which made the experience more comfortable.\\",
+    "Rahul explained the diamond testing process very clearly. I appreciated how patiently he answered my questions.\\",
+    "I appreciated Rahul's help with the information I was given. He answered my questions in a clear and approachable way.",
+    "Rahul gave me a clear understanding of diamond evaluation. His knowledge and patience stood out during the visit.\\",
+    "Rahul answered my questions about the different aspects of diamond quality clearly. It was a very useful and informative discussion.\\",
+    "I appreciated Rahul's help with the questions I had about diamonds. He answered my questions in a clear and approachable way.",
+    "Rahul made diamond checking easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul explained diamond verification very clearly. I appreciated how patiently he answered my questions.\\",
+    "My discussion with Rahul about the information I was given was helpful and informative.\\",
+    "Rahul was very helpful in explaining diamond verification. He made the technical details much easier to understand.\\",
+    "I had a good conversation with Rahul about diamond characteristics. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's help with understanding the diamond information. He answered my questions in a clear and approachable way.",
+    "I had a good conversation with Rahul about diamond quality. He explained the important points without making them complicated.\\",
+    "Rahul was very professional when discussing the overall diamond consultation. The explanation was easy to understand.\\",
+    "Rahul gave me a clear understanding of the diamond testing process. His knowledge and patience stood out during the visit.\\",
+    "Rahul was very helpful in explaining the different aspects of diamond quality. He made the technical details much easier to understand.\\",
+    "Rahul was very professional when discussing the different diamond options. The explanation was easy to understand.\\",
+    "The guidance from Rahul on the different aspects of diamond quality was helpful. He explained everything in a straightforward way.\\",
+    "Rahul answered my questions about diamond identification clearly. It was a very useful and informative discussion.\\",
+    "Rahul made the diamond testing process easy to understand. I appreciated his patient and professional approach.\\",
+    "My discussion with Rahul about understanding the diamond information was helpful and informative.\\",
+    "Rahul explained the information I was given clearly and patiently. I appreciated the professional guidance.\\",
+    "I had a good conversation with Rahul about diamond knowledge. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's knowledge of the diamond checking machine. He explained the details clearly and professionally.",
+    "I appreciated the way Rahul explained diamond evaluation. The information was detailed but still easy to understand.\\",
+    "The guidance from Rahul on diamond quality and characteristics was helpful. He explained everything in a straightforward way.\\",
+    "I learned a lot about diamond quality and characteristics from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul took the time to explain the details I wanted to know properly, which made the experience more comfortable.\\",
+    "I appreciated Rahul's knowledge of the diamond testing process. He explained the details clearly and professionally.",
+    "Rahul gave me a clear understanding of the different aspects of diamond quality. His knowledge and patience stood out during the visit.\\",
+    "The explanation from Rahul about diamond evaluation was clear and detailed. He was happy to answer my questions.\\",
+    "Rahul explained understanding the diamond information clearly and patiently. I appreciated the professional guidance.\\",
+    "I appreciated Rahul's knowledge of diamond identification. He explained the details clearly and professionally.",
+    "I had a good conversation with Rahul about diamond testing. He explained the important points without making them complicated.\\",
+    "Rahul took the time to explain the information I was given properly, which made the experience more comfortable.\\",
+    "Rahul explained diamond quality very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul gave me a clear understanding of diamond verification. His knowledge and patience stood out during the visit.\\",
+    "I learned a lot about diamond identification from Rahul. His explanation was simple and easy to follow.\\",
+    "My discussion with Rahul about the questions I had about diamonds was helpful and informative.\\",
+    "I learned a lot about the diamond checking machine from Rahul. His explanation was simple and easy to follow.\\",
+    "The guidance from Rahul on diamond evaluation was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained the different diamond options clearly and patiently. I appreciated the professional guidance.\\",
+    "Rahul took the time to explain diamond checking properly. I found the discussion very informative.\\",
+    "Rahul answered my questions about diamond quality clearly. It was a very useful and informative discussion.\\",
+    "Rahul explained diamond characteristics very clearly. I appreciated how patiently he answered my questions.\\",
+    "I had a good conversation with Rahul about diamond verification. He explained the important points without making them complicated.\\",
+    "Rahul made diamond verification easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul took the time to explain diamond verification properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain diamond identification properly. I found the discussion very informative.\\",
+    "I appreciated Rahul's knowledge of diamond quality. He explained the details clearly and professionally.",
+    "I learned a lot about diamond evaluation from Rahul. His explanation was simple and easy to follow.\\",
+    "I had a good conversation with Rahul about diamond evaluation. He explained the important points without making them complicated.\\",
+    "I appreciated Rahul's knowledge of the different aspects of diamond quality. He explained the details clearly and professionally.",
+    "Rahul answered my questions about diamond knowledge clearly. It was a very useful and informative discussion.\\",
+    "Rahul was very helpful in explaining the diamond testing process. He made the technical details much easier to understand.\\",
+    "Rahul made diamond identification easy to understand. I appreciated his patient and professional approach.\\",
+    "My discussion with Rahul about the consultation was helpful and informative.\\",
+    "The guidance from Rahul on diamond testing was helpful. He explained everything in a straightforward way.\\",
+    "Rahul gave me a clear understanding of diamond testing. His knowledge and patience stood out during the visit.\\",
+    "Rahul made diamond evaluation easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul answered my questions about diamond verification clearly. It was a very useful and informative discussion.\\",
+    "Rahul was very helpful in explaining diamond identification. He made the technical details much easier to understand.\\",
+    "Rahul gave me a clear understanding of diamond checking. His knowledge and patience stood out during the visit.\\",
+    "The explanation from Rahul about diamond quality was clear and detailed. He was happy to answer my questions.\\",
+    "My discussion with Rahul about the details I wanted to know was helpful and informative.\\",
+    "Rahul made diamond characteristics easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul was very helpful in explaining diamond testing. He made the technical details much easier to understand.\\",
+    "Rahul took the time to explain the different aspects of diamond quality properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain diamond evaluation properly. I found the discussion very informative.\\",
+    "My discussion with Rahul about the different diamond options was helpful and informative.\\",
+    "I learned a lot about diamond checking from Rahul. His explanation was simple and easy to follow.\\",
+    "I appreciated Rahul's knowledge of diamond quality and characteristics. He explained the details clearly and professionally.",
+    "Rahul was very professional when discussing understanding the diamond information. The explanation was easy to understand.\\",
+    "Rahul took the time to explain diamond quality and characteristics properly. I found the discussion very informative.\\",
+    "The guidance from Rahul on the diamond testing process was helpful. He explained everything in a straightforward way.\\",
+    "Rahul was very helpful in explaining diamond characteristics. He made the technical details much easier to understand.\\",
+    "I appreciated the way Rahul explained diamond knowledge. The information was detailed but still easy to understand.\\",
+    "I had a good conversation with Rahul about the diamond checking machine. He explained the important points without making them complicated.\\",
+    "Rahul made diamond quality and characteristics easy to understand. I appreciated his patient and professional approach.\\",
+    "I learned a lot about diamond quality from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul explained diamond evaluation very clearly. I appreciated how patiently he answered my questions.\\",
+    "Rahul took the time to explain the questions I had about diamonds properly, which made the experience more comfortable.\\",
+    "Rahul gave me a clear understanding of the diamond checking machine. His knowledge and patience stood out during the visit.\\",
+    "I appreciated Rahul's help with the details I wanted to know. He answered my questions in a clear and approachable way.",
+    "The guidance from Rahul on diamond characteristics was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained the consultation clearly and patiently. I appreciated the professional guidance.\\",
+    "Rahul took the time to explain diamond characteristics properly. I found the discussion very informative.\\",
+    "The explanation from Rahul about the diamond testing process was clear and detailed. He was happy to answer my questions.\\",
+    "I learned a lot about the different aspects of diamond quality from Rahul. His explanation was simple and easy to follow.\\",
+    "I appreciated Rahul's knowledge of diamond checking. He explained the details clearly and professionally.",
+    "I learned a lot about diamond knowledge from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul took the time to explain diamond knowledge properly. I found the discussion very informative.\\",
+    "Rahul explained diamond knowledge very clearly. I appreciated how patiently he answered my questions.\\",
+    "The explanation from Rahul about diamond identification was clear and detailed. He was happy to answer my questions.\\",
+    "I appreciated the way Rahul explained diamond quality and characteristics. The information was detailed but still easy to understand.\\",
+    "Rahul explained the questions I had about diamonds clearly and patiently. I appreciated the professional guidance.\\",
+    "The guidance from Rahul on the diamond checking machine was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained diamond checking very clearly. I appreciated how patiently he answered my questions.\\",
+    "I appreciated Rahul's knowledge of diamond verification. He explained the details clearly and professionally.",
+    "Rahul took the time to explain diamond testing properly. I found the discussion very informative.\\",
+    "Rahul took the time to explain understanding the diamond information properly, which made the experience more comfortable.\\",
+    "I appreciated Rahul's help with the overall diamond consultation. He answered my questions in a clear and approachable way.",
+    "Rahul made diamond testing easy to understand. I appreciated his patient and professional approach.\\",
+    "Rahul was very helpful in explaining diamond checking. He made the technical details much easier to understand.\\",
+    "I learned a lot about diamond testing from Rahul. His explanation was simple and easy to follow.\\",
+    "Rahul explained the overall diamond consultation clearly and patiently. I appreciated the professional guidance.\\",
+    "The explanation from Rahul about the diamond checking machine was clear and detailed. He was happy to answer my questions.\\",
+    "The guidance from Rahul on diamond identification was helpful. He explained everything in a straightforward way.\\",
+    "Rahul explained diamond quality and characteristics very clearly. I appreciated how patiently he answered my questions.\\",
+    "I appreciated Rahul's help with the different diamond options. He answered my questions in a clear and approachable way.",
+    "Rahul explained the diamond checking machine very clearly. I appreciated how patiently he answered my questions."
+]
+};
+
+let currentCategory = "overall";
+let indexes = {
+  overall: 0,
+  diamond: 0,
+  guidance: 0,
+  transparency: 0,
+  service: 0
+};
+
+const review = document.getElementById("review");
+const categories = document.querySelectorAll(".category");
+
+function showSuggestion(category, advance = false){
+  const list = suggestions[category];
+  if(advance) indexes[category] = (indexes[category] + 1) % list.length;
+  review.textContent = list[indexes[category]];
+}
+
+categories.forEach(btn => {
+  btn.addEventListener("click", () => {
+    categories.forEach(x => x.classList.remove("selected"));
+    btn.classList.add("selected");
+    currentCategory = btn.dataset.category;
+    indexes[currentCategory] = Math.floor(Math.random() * suggestions[currentCategory].length);
+    showSuggestion(currentCategory);
+  });
+});
+
+document.getElementById("tryBtn").addEventListener("click", () => {
+  showSuggestion(currentCategory, true);
+});
+
+document.getElementById("copyBtn").addEventListener("click", async () => {
+  const text = review.innerText.trim();
+
+  if(!text){
+    alert("Please enter your review first.");
+    return;
+  }
+
+  try{
+    await navigator.clipboard.writeText(text);
+  }catch(e){
+    const area = document.createElement("textarea");
+    area.value = text;
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand("copy");
+    area.remove();
+  }
+
+  const btn = document.getElementById("copyBtn");
+  const old = btn.textContent;
+  btn.textContent = "Copied ✓";
+  setTimeout(() => btn.textContent = old, 1600);
+});
+
+// Initial suggestion
+showSuggestion("overall");
+</script>
+</body>
+</html>
