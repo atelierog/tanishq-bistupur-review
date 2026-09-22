@@ -177,13 +177,28 @@ const counts=Object.values(SUGGESTIONS).flat().length;
 if(counts!==250) console.warn("Suggestion count:",counts);
 
 let currentCategory="general",currentIndex=0,currentLanguage=localStorage.getItem("dxc_language")||"en";
+const USED_KEY="dxc_used_suggestions_v1";
+function getUsed(){try{return JSON.parse(localStorage.getItem(USED_KEY)||"{}")}catch(e){return {}}}
+function saveUsed(m){localStorage.setItem(USED_KEY,JSON.stringify(m))}
+function usedFor(cat){const m=getUsed();return Array.isArray(m[cat])?m[cat]:[]}
+function markUsed(cat,i){const m=getUsed();m[cat]=usedFor(cat);if(!m[cat].includes(i))m[cat].push(i);saveUsed(m)}
+function freshIndex(cat){
+  const used=usedFor(cat),available=[];
+  for(let i=0;i<SUGGESTIONS[cat].length;i++)if(!used.includes(i))available.push(i);
+  if(!available.length)return -1;
+  return available[Math.floor(Math.random()*available.length)];
+}
 const review=document.getElementById("review"),enBtn=document.getElementById("enBtn"),hiBtn=document.getElementById("hiBtn");
 function render(){const pair=SUGGESTIONS[currentCategory][currentIndex];review.textContent=pair[currentLanguage==="hinglish"?1:0];enBtn.classList.toggle("active",currentLanguage==="en");hiBtn.classList.toggle("active",currentLanguage==="hinglish");enBtn.setAttribute("aria-pressed",currentLanguage==="en");hiBtn.setAttribute("aria-pressed",currentLanguage==="hinglish");}
-function chooseCategory(category){currentCategory=category;currentIndex=Math.floor(Math.random()*SUGGESTIONS[category].length);document.getElementById("step1").classList.remove("active");document.getElementById("step2").classList.add("active");render();window.scrollTo({top:0,behavior:"smooth"});}
+function chooseCategory(category){currentCategory=category;let n=freshIndex(category);if(n<0){const m=getUsed();m[category]=[];saveUsed(m);n=freshIndex(category)}currentIndex=n;markUsed(category,currentIndex);document.getElementById("step1").classList.remove("active");document.getElementById("step2").classList.add("active");render();window.scrollTo({top:0,behavior:"smooth"});}
 document.querySelectorAll(".choice").forEach(btn=>btn.addEventListener("click",()=>chooseCategory(btn.dataset.category)));
 function switchLanguage(lang){currentLanguage=lang;localStorage.setItem("dxc_language",lang);render();}
 enBtn.addEventListener("click",()=>switchLanguage("en"));hiBtn.addEventListener("click",()=>switchLanguage("hinglish"));
-document.getElementById("tryBtn").addEventListener("click",()=>{let next;do{next=Math.floor(Math.random()*SUGGESTIONS[currentCategory].length)}while(SUGGESTIONS[currentCategory].length>1&&next===currentIndex);currentIndex=next;render();});
+document.getElementById("tryBtn").addEventListener("click",()=>{
+ let next=freshIndex(currentCategory);
+ if(next<0){alert("You've seen all suggestions in this category. The list will start again.");const m=getUsed();m[currentCategory]=[];saveUsed(m);next=freshIndex(currentCategory)}
+ currentIndex=next;markUsed(currentCategory,currentIndex);render();
+});
 document.getElementById("backBtn").addEventListener("click",()=>{document.getElementById("step2").classList.remove("active");document.getElementById("step1").classList.add("active");window.scrollTo({top:0,behavior:"smooth"});});
 document.getElementById("copyBtn").addEventListener("click",async()=>{const text=review.innerText.trim();if(!text)return;try{await navigator.clipboard.writeText(text)}catch(e){const area=document.createElement("textarea");area.value=text;document.body.appendChild(area);area.select();document.execCommand("copy");area.remove();}const btn=document.getElementById("copyBtn"),old=btn.textContent;btn.textContent="Copied ✓";setTimeout(()=>btn.textContent=old,1600);});
 render();
