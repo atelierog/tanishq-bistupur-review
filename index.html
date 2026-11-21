@@ -36,8 +36,9 @@ button,.link{font:700 14px Arial,sans-serif;cursor:pointer}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .choice{border:1px solid #ccc;background:#fff;color:#222;border-radius:11px;padding:12px 8px;font-size:13px}
 .choice[aria-pressed=true]{background:#111;color:#fff;border-color:#111}
-.sentiments{display:flex;gap:7px}
-.sentiments .choice{flex:1}
+.detail-label{display:block;font-size:13px;font-weight:700;margin:17px 0 7px}
+.detail-input{width:100%;border:1px solid #ccc;border-radius:11px;padding:12px;font:15px Arial,sans-serif;color:#111;outline:none}
+.detail-input:focus{border-color:#111;box-shadow:0 0 0 2px #11111118}
 .modal-actions{display:flex;gap:9px;margin-top:18px}
 .modal-actions button{flex:1;margin:0}
 .modal-close{display:block;margin:8px auto 0;background:none;border:0;color:#666;padding:8px}
@@ -75,12 +76,8 @@ button,.link{font:700 14px Arial,sans-serif;cursor:pointer}
    <button class="choice" type="button" data-topic="Billing experience">Billing experience</button>
    <button class="choice" type="button" data-topic="Store experience">Store experience</button>
   </div>
-  <div class="choice-title">How was it? (optional)</div>
-  <div class="sentiments" id="sentimentChoices">
-   <button class="choice" type="button" data-feeling="positive">Good</button>
-   <button class="choice" type="button" data-feeling="neutral">Okay</button>
-   <button class="choice" type="button" data-feeling="negative">Not good</button>
-  </div>
+  <label class="detail-label" for="helpDetail">Add a name or a few words (optional)</label>
+  <input class="detail-input" id="helpDetail" type="text" maxlength="100" placeholder="e.g. Amit, who helped me">
   <div class="modal-actions"><button class="secondary" id="helpCancel" type="button">Cancel</button><button class="primary" id="helpCreate" type="button" disabled>Create review</button></div>
  </div>
 </div></main>
@@ -90,23 +87,22 @@ POST JSON {text,language,instruction}; return JSON {text}. The service must pres
 add no claims, and avoid storing customer text. When absent or unavailable, local cleanup is used. */
 window.DXC_AI_ENDPOINT="https://tanishq-qr-ai-review.atelierog-co.workers.dev/rewrite";
 const $=id=>document.getElementById(id),input=$("experience"),draft=$("draft"),status=$("status");const language="en";
-let chosenTopic="",chosenFeeling="";
+let chosenTopic="";
 const modal=$("helpModal");
 $("helpOpen").addEventListener("click",()=>{modal.classList.add("open")});
 $("helpCancel").addEventListener("click",()=>modal.classList.remove("open"));
 modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("open")});
 document.querySelectorAll("[data-topic]").forEach(b=>b.addEventListener("click",()=>{chosenTopic=b.dataset.topic;document.querySelectorAll("[data-topic]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));$("helpCreate").disabled=false}));
-document.querySelectorAll("[data-feeling]").forEach(b=>b.addEventListener("click",()=>{chosenFeeling=b.dataset.feeling;document.querySelectorAll("[data-feeling]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)))}));
-$("helpCreate").addEventListener("click",()=>{if(!chosenTopic)return;input.value="The part of my visit I want to review was: "+chosenTopic+"."+(chosenFeeling?" My experience was "+chosenFeeling+".":"");count();modal.classList.remove("open");improve()});
+$("helpCreate").addEventListener("click",()=>{if(!chosenTopic)return;const detail=$("helpDetail").value.trim();input.value="Topic: "+chosenTopic+"."+(detail?" Customer detail: "+detail+".":"");count();modal.classList.remove("open");improve()});
 
 function setStatus(m,k=""){status.textContent=m;status.className="status "+k}
 function count(){$("inputCount").textContent=input.value.length+" / 1,200";$("draftCount").textContent=draft.innerText.trim().length+" characters"}
 input.addEventListener("input",count);draft.addEventListener("input",count);
-function animateWords(text){return new Promise(resolve=>{const words=text.split(/\\s+/);let i=0;draft.textContent="";draft.classList.add("typing");function next(){if(i<words.length){draft.textContent+=(i?" ":"")+words[i++];count();setTimeout(next,75)}else{draft.classList.remove("typing");resolve()}}next()})}
+function animateWords(text){return new Promise(resolve=>{const words=text.split(/\\s+/);let i=0;draft.textContent="";draft.classList.add("typing");function next(){if(i<words.length){draft.textContent+=(i?" ":"")+words[i++];count();setTimeout(next,180)}else{draft.classList.remove("typing");resolve()}}next()})}
 function polishOffline(raw){let t=raw.replace(/\r/g," ").replace(/[\t ]+/g," ").replace(/\n{3,}/g,"\n\n").trim();return t.split(/(?<=[.!?।])\s+/u).map(s=>{s=s.trim();if(!s)return"";s=s.replace(/^([a-z])/u,m=>m.toUpperCase());if(!/[.!?।]$/.test(s))s+=".";return s}).join(" ")}
 async function improve(){const original=input.value.trim();if(original.length<5){setStatus("Please write a little about what actually happened first.","error");input.focus();return}
 const btn=$("improve");btn.disabled=true;btn.textContent="Working…";
-try{if(window.DXC_AI_ENDPOINT){try{const res=await fetch(window.DXC_AI_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:original,language,instruction:"Write a natural review in English, normally 2 to 3 complete sentences (about 25 to 45 words). The customer may have supplied only a short phrase or selected a topic and optional feeling. Use only the topic and feeling they supplied; do not invent specific events, staff actions, products, outcomes or details. Keep it general if details are limited. Preserve the selected positive, neutral or negative sentiment. Do not turn neutral or negative feedback into praise. Return only the review."})});if(!res.ok)throw Error("AI endpoint returned "+res.status);const data=await res.json();if(typeof data.text!=="string"||!data.text.trim())throw Error("Invalid AI response");await animateWords(data.text.trim());setStatus("Review ready. Please check it carefully.","ok")}catch(e){await animateWords(polishOffline(original));setStatus("AI is unavailable; basic wording cleanup was used instead.")}}else{await animateWords(polishOffline(original));setStatus("Offline wording cleanup complete.","ok")}}
+try{if(window.DXC_AI_ENDPOINT){try{const res=await fetch(window.DXC_AI_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:original,language,instruction:"Write a natural review in English, normally 2 to 3 complete sentences (about 25 to 45 words). The customer may have supplied only a short phrase or selected a topic and optional feeling. Use the selected topic and any customer-provided name or detail exactly where natural. Never invent a staff name, event, service, product, outcome or personal experience. If only a topic is provided, write generally without pretending to know what happened. Preserve the customer-provided meaning and sentiment. Return only the review."})});if(!res.ok)throw Error("AI endpoint returned "+res.status);const data=await res.json();if(typeof data.text!=="string"||!data.text.trim())throw Error("Invalid AI response");await animateWords(data.text.trim());setStatus("Review ready. Please check it carefully.","ok")}catch(e){await animateWords(polishOffline(original));setStatus("AI is unavailable; basic wording cleanup was used instead.")}}else{await animateWords(polishOffline(original));setStatus("Offline wording cleanup complete.","ok")}}
 finally{btn.disabled=false;btn.textContent="Improve my wording";count()}}
 $("improve").addEventListener("click",improve);
 $("copy").addEventListener("click",async()=>{const t=draft.innerText.trim();if(!t){setStatus("There is no review to copy yet.","error");return}try{await navigator.clipboard.writeText(t);setStatus("Copied. You can paste it into Google Reviews.","ok")}catch(e){const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();const ok=document.execCommand("copy");a.remove();setStatus(ok?"Copied. You can paste it into Google Reviews.":"Copy was blocked. Select the draft and copy it manually.",ok?"ok":"error")}});
