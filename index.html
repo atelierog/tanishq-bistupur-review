@@ -91,6 +91,10 @@ button:disabled{opacity:.55;cursor:not-allowed}
  </div>
 </div></main>
 <script>
+/* Preserve existing printed QR codes while moving customers to the branded Atelier OG domain. */
+if (location.hostname === "atelierog.github.io" && location.pathname.startsWith("/tanishq-bistupur-review")) {
+  location.replace("https://review.atelierog.co.in/tanishq-bistupur" + location.search + location.hash);
+}
 /* Optional AI integration: define window.DXC_AI_ENDPOINT as a same-origin HTTPS endpoint before this script.
 POST JSON {text,language,instruction}; return JSON {text}. The service must preserve facts and sentiment,
 add no claims, and avoid storing customer text. When absent or unavailable, local cleanup is used. */
