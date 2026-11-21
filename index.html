@@ -98,7 +98,7 @@ $("helpCreate").addEventListener("click",()=>{if(!chosenTopic)return;const detai
 function setStatus(m,k=""){status.textContent=m;status.className="status "+k}
 function count(){$("inputCount").textContent=input.value.length+" / 1,200";$("draftCount").textContent=draft.innerText.trim().length+" characters"}
 input.addEventListener("input",count);draft.addEventListener("input",count);
-function animateWords(text){return new Promise(resolve=>{const words=text.split(/\\s+/);let i=0;draft.textContent="";draft.classList.add("typing");function next(){if(i<words.length){draft.textContent+=(i?" ":"")+words[i++];count();setTimeout(next,300)}else{draft.classList.remove("typing");resolve()}}next()})}
+function animateWords(text){return new Promise(resolve=>{const words=text.split(/\s+/);let i=0;draft.textContent="";draft.classList.add("typing");function next(){if(i<words.length){draft.textContent+=(i?" ":"")+words[i++];count();setTimeout(next,70)}else{draft.classList.remove("typing");resolve()}}next()})}
 function polishOffline(raw){let t=raw.replace(/\r/g," ").replace(/[\t ]+/g," ").replace(/\n{3,}/g,"\n\n").trim();return t.split(/(?<=[.!?।])\s+/u).map(s=>{s=s.trim();if(!s)return"";s=s.replace(/^([a-z])/u,m=>m.toUpperCase());if(!/[.!?।]$/.test(s))s+=".";return s}).join(" ")}
 async function improve(topic=""){const original=input.value.trim();if(!topic&&original.length<5){setStatus("Please write a little about what actually happened first.","error");input.focus();return}
 const btn=$("improve");btn.disabled=true;btn.textContent="Working…";
