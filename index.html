@@ -91,6 +91,7 @@ button:disabled{opacity:.55;cursor:not-allowed}
   </div>
   <label class="detail-label" for="helpDetail">Add a name or detail <span style="font-weight:400;color:#777">(optional)</span></label>
   <input class="detail-input" id="helpDetail" type="text" maxlength="160" placeholder="e.g. Amit helped me understand diamond quality">
+  <div id="helpError" class="status error" role="alert" aria-live="polite"></div>
   <div class="modal-actions"><button class="secondary" id="helpCancel" type="button">Cancel</button><button class="primary" id="helpCreate" type="button" disabled>Create my review</button></div>
  </div>
 </div></main>
@@ -106,7 +107,7 @@ $("helpOpen").addEventListener("click",()=>{chosenTopic="";$("helpDetail").value
 $("helpCancel").addEventListener("click",()=>modal.classList.remove("open"));
 modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("open")});
 document.querySelectorAll("[data-topic]").forEach(b=>b.addEventListener("click",()=>{chosenTopic=b.dataset.topic;document.querySelectorAll("[data-topic]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));$("helpCreate").disabled=false}));
-$("helpCreate").addEventListener("click",()=>{if(!chosenTopic)return;goToDraft();const detail=$("helpDetail").value.trim();input.value=detail;count();modal.classList.remove("open");improve(chosenTopic)});
+$("helpCreate").addEventListener("click",()=>{if(!chosenTopic)return;const detail=$("helpDetail").value.trim();if(detail.length<5){$("helpError").textContent="Please add a little about what happened during your visit."; $("helpDetail").focus();return}$("helpError").textContent="";goToDraft();input.value=detail;count();modal.classList.remove("open");improve(chosenTopic)});
 
 function setStatus(m,k=""){status.textContent=m;status.className="status "+k}
 function count(){$("inputCount").textContent=input.value.length+" / 1,200";$("draftCount").textContent=draft.innerText.trim().length+" characters"}
