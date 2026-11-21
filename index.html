@@ -23,9 +23,12 @@ textarea:focus,[contenteditable=true]:focus{border-color:#111;box-shadow:0 0 0 2
 .seg button[aria-pressed=true]{background:#111;color:#fff}
 button,.link{font:700 14px Arial,sans-serif;cursor:pointer}
 /* Keep mobile tap/focus feedback strictly monochrome */
-button,a,.link,[role="button"],input,textarea{-webkit-tap-highlight-color:transparent;accent-color:#111}
-button:focus,button:focus-visible,a:focus,a:focus-visible,.link:focus-visible{outline:2px solid #111;outline-offset:2px;box-shadow:none}
-button:active,.link:active{filter:brightness(.94)}
+/* Force monochrome interaction feedback on Android/iOS browsers */
+*,*::before,*::after{-webkit-tap-highlight-color:rgba(0,0,0,0)!important}
+button,a,.link,[role="button"],input,textarea,select{accent-color:#111!important;outline-color:#111!important}
+button:focus,button:focus-visible,button:active,a:focus,a:focus-visible,a:active,.link:focus,.link:focus-visible,.link:active,[role="button"]:focus,[role="button"]:active,input:focus,textarea:focus,select:focus{outline:2px solid #111!important;outline-offset:2px;box-shadow:none!important}
+button:active,.link:active,a:active,[role="button"]:active{background-color:#111!important;color:#fff!important;filter:none!important}
+.choice[aria-pressed="true"],.seg button[aria-pressed="true"]{background:#111!important;color:#fff!important;border-color:#111!important}
 button:disabled{opacity:.55;cursor:not-allowed}
 
 .primary{width:100%;border:0;border-radius:12px;padding:15px;background:#111;color:#fff;margin-top:16px}
