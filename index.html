@@ -22,6 +22,12 @@ textarea:focus,[contenteditable=true]:focus{border-color:#111;box-shadow:0 0 0 2
 .seg button{border:0;background:transparent;color:#555;padding:8px 13px;border-radius:999px;font-weight:700;cursor:pointer}
 .seg button[aria-pressed=true]{background:#111;color:#fff}
 button,.link{font:700 14px Arial,sans-serif;cursor:pointer}
+/* Keep mobile tap/focus feedback strictly monochrome */
+button,a,.link,[role="button"],input,textarea{-webkit-tap-highlight-color:transparent;accent-color:#111}
+button:focus,button:focus-visible,a:focus,a:focus-visible,.link:focus-visible{outline:2px solid #111;outline-offset:2px;box-shadow:none}
+button:active,.link:active{filter:brightness(.94)}
+button:disabled{opacity:.55;cursor:not-allowed}
+
 .primary{width:100%;border:0;border-radius:12px;padding:15px;background:#111;color:#fff;margin-top:16px}
 .primary:disabled{opacity:.6;cursor:wait}
 .secondary{border:1px solid #111;background:#fff;color:#111;border-radius:12px;padding:12px 14px}
